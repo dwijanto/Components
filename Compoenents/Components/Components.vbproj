@@ -1,0 +1,1384 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{51CB8CEB-6451-42C9-8CAF-2EA7A6068BF0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Components.My.MyApplication</StartupObject>
+    <RootNamespace>Components</RootNamespace>
+    <AssemblyName>Components</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Components.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Components.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Lgc2.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Exchange.WebServices">
+      <HintPath>..\..\..\EWS\ExchangeWebServer\ExchangeWebServer\Service Assembly\Microsoft.Exchange.WebServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="npgsql, Version=2.1.3.0, Culture=neutral, PublicKeyToken=5d8b90d52f46fda7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\..\..\..\Windows\Microsoft.NET\assembly\GAC_MSIL\Npgsql\v4.0_2.0.10.0__5d8b90d52f46fda7\npgsql.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\CollapssiblePanel\CollapseButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\CollapssiblePanel\CollapsibleHeaderButton.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\CollapssiblePanel\CollapsiblePanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\CollapssiblePanel\CollapsiblePanelColorTable.vb" />
+    <Compile Include="Admin\CollapssiblePanel\CollapsiblePanelDesigner.vb" />
+    <Compile Include="Admin\CollapssiblePanel\StateButtonBase.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\ExcelStuff.vb" />
+    <Compile Include="Admin\UCDoubleBufferPanel.Designer.vb">
+      <DependentUpon>UCDoubleBufferPanel.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UCDoubleBufferPanel.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Admin\UCHeader.Designer.vb">
+      <DependentUpon>UCHeader.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UCHeader.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Admin\UCToolstrip.Designer.vb">
+      <DependentUpon>UCToolstrip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\UCToolstrip.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClassEWS.vb" />
+    <Compile Include="Class\CategoryIssuesAdapter.vb" />
+    <Compile Include="Class\CMMFAdapter.vb" />
+    <Compile Include="Class\CMMFModel.vb" />
+    <Compile Include="Class\CommentGroupAdapter.vb" />
+    <Compile Include="Class\CommentMappingAdapter.vb" />
+    <Compile Include="Class\IController.vb" />
+    <Compile Include="Class\IModel.vb" />
+    <Compile Include="Class\ImportOPLTComments.vb" />
+    <Compile Include="Class\IToolbarAction.vb" />
+    <Compile Include="Class\ManagementMessageAdapter.vb" />
+    <Compile Include="Class\ModelAdapter.vb" />
+    <Compile Include="Class\RTurnoverExtendYearCur.vb" />
+    <Compile Include="Controller\CMMFVolumeController.vb" />
+    <Compile Include="Controller\OPLTCOMMENTController.vb" />
+    <Compile Include="Controller\OPLTCOMMENTTXController.vb" />
+    <Compile Include="Controller\TEUCPController.vb" />
+    <Compile Include="Controller\TEUFGController.vb" />
+    <Compile Include="DbAdapter.vb" />
+    <Compile Include="DialogAddCategoryIssue.Designer.vb">
+      <DependentUpon>DialogAddCategoryIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAddCategoryIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAddCommentMapping.Designer.vb">
+      <DependentUpon>DialogAddCommentMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAddCommentMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogAddManagementMessage.Designer.vb">
+      <DependentUpon>DialogAddManagementMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogAddManagementMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogSAOAllocationInput.Designer.vb">
+      <DependentUpon>DialogSAOAllocationInput.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogSAOAllocationInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ExportToExcelFile.vb" />
+    <Compile Include="Form1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.vb">
+      <DependentUpon>Form1.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormABCSupplier.Designer.vb">
+      <DependentUpon>FormABCSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormABCSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAccountingDocument.Designer.vb">
+      <DependentUpon>FormAccountingDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAccountingDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAssignPOSASLShipdate.Designer.vb">
+      <DependentUpon>FormAssignPOSASLShipdate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAssignPOSASLShipdate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAutoGetEmail.Designer.vb">
+      <DependentUpon>FormAutoGetEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormAutoGetEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrowseFolder.Designer.vb">
+      <DependentUpon>FormBrowseFolder.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBrowseFolder.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrowseInvoicePackingList.Designer.vb">
+      <DependentUpon>FormBrowseInvoicePackingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBrowseInvoicePackingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormBrowseFolderCP.Designer.vb">
+      <DependentUpon>FormBrowseFolderCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormBrowseFolderCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCategoryIssue.Designer.vb">
+      <DependentUpon>FormCategoryIssue.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCategoryIssue.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormChangePackingList.Designer.vb">
+      <DependentUpon>FormChangePackingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormChangePackingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCMMFMissingLoadingCode.Designer.vb">
+      <DependentUpon>FormCMMFMissingLoadingCode.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCMMFMissingLoadingCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCMMFVolume.Designer.vb">
+      <DependentUpon>FormCMMFVolume.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCMMFVolume.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommentCodeTx.Designer.vb">
+      <DependentUpon>FormCommentCodeTx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommentCodeTx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommentConversion.Designer.vb">
+      <DependentUpon>FormCommentConversion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommentConversion.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCommentMapping.Designer.vb">
+      <DependentUpon>FormCommentMapping.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCommentMapping.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConvCustSAS.Designer.vb">
+      <DependentUpon>FormConvCustSAS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConvCustSAS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormConvertFamilySBU.Designer.vb">
+      <DependentUpon>FormConvertFamilySBU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormConvertFamilySBU.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCustomerFlow.Designer.vb">
+      <DependentUpon>FormCustomerFlow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCustomerFlow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeliveryHelper.Designer.vb">
+      <DependentUpon>FormDeliveryHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeliveryHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDeliveryHelper2.Designer.vb">
+      <DependentUpon>FormDeliveryHelper2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDeliveryHelper2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDocEmail.Designer.vb">
+      <DependentUpon>FormDocEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormDocEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmailPreparation.Designer.vb">
+      <DependentUpon>FormEmailPreparation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmailPreparation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmailPreparation2.Designer.vb">
+      <DependentUpon>FormEmailPreparation2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmailPreparation2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmailPreparationCP.Designer.vb">
+      <DependentUpon>FormEmailPreparationCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmailPreparationCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormEmailPreparationCP2.Designer.vb">
+      <DependentUpon>FormEmailPreparationCP2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormEmailPreparationCP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenerateChart.Designer.vb">
+      <DependentUpon>FormGenerateChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenerateChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGenerateParetoChart.Designer.vb">
+      <DependentUpon>FormGenerateParetoChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGenerateParetoChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetEmailFromExServer.Designer.vb">
+      <DependentUpon>FormGetEmailFromExServer.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetEmailFromExServer.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetEmailFromExServerCP.Designer.vb">
+      <DependentUpon>FormGetEmailFromExServerCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetEmailFromExServerCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetSelectedEmail.Designer.vb">
+      <DependentUpon>FormGetSelectedEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetSelectedEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormGetSelectedEmailCP.Designer.vb">
+      <DependentUpon>FormGetSelectedEmailCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormGetSelectedEmailCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormHelper.Designer.vb">
+      <DependentUpon>FormHelper.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormHelper.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportAccountingHD.Designer.vb">
+      <DependentUpon>FormImportAccountingHD.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportAccountingHD.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportBillingDocument.Designer.vb">
+      <DependentUpon>FormImportBillingDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportBillingDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportConfShip.Designer.vb">
+      <DependentUpon>FormImportConfShip.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportConfShip.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportCustomerFlow.Designer.vb">
+      <DependentUpon>FormImportCustomerFlow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportCustomerFlow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportDSV.Designer.vb">
+      <DependentUpon>FormImportDSV.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportDSV.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportEkko.Designer.vb">
+      <DependentUpon>FormImportEkko.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportEkko.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportForecastComponents.Designer.vb">
+      <DependentUpon>FormImportForecastComponents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportForecastComponents.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportHouseBill.Designer.vb">
+      <DependentUpon>FormImportHouseBill.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportHouseBill.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportMasterContactCP.Designer.vb">
+      <DependentUpon>FormImportMasterContactCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportMasterContactCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportMaterialMaster.Designer.vb">
+      <DependentUpon>FormImportMaterialMaster.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportMaterialMaster.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportMissingBillOfLading.Designer.vb">
+      <DependentUpon>FormImportMissingBillOfLading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportMissingBillOfLading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportOPLT.Designer.vb">
+      <DependentUpon>FormImportOPLT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportOPLT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportOPLT3710.Designer.vb">
+      <DependentUpon>FormImportOPLT3710.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportOPLT3710.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportOPLT3720.Designer.vb">
+      <DependentUpon>FormImportOPLT3720.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportOPLT3720.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportOPLTComments.Designer.vb">
+      <DependentUpon>FormImportOPLTComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportOPLTComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportPackingList.Designer.vb">
+      <DependentUpon>FormImportPackingList.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportPackingList.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportPackingListBillofLading.Designer.vb">
+      <DependentUpon>FormImportPackingListBillofLading.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportPackingListBillofLading.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportPanalpina.Designer.vb">
+      <DependentUpon>FormImportPanalpina.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportPanalpina.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportPO39.Designer.vb">
+      <DependentUpon>FormImportPO39.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportPO39.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportSAO.Designer.vb">
+      <DependentUpon>FormImportSAO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportSAO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportSAOSIS.Designer.vb">
+      <DependentUpon>FormImportSAOSIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportSAOSIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportTEUCMMFVolume.Designer.vb">
+      <DependentUpon>FormImportTEUCMMFVolume.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportTEUCMMFVolume.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportVendorBUSP.designer.vb">
+      <DependentUpon>FormImportVendorBUSP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportVendorBUSP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportVendorSSM.Designer.vb">
+      <DependentUpon>FormImportVendorSSM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportVendorSSM.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormImportZZ0035.designer.vb">
+      <DependentUpon>FormImportZZ0035.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormImportZZ0035.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInputCommentCodeTx.Designer.vb">
+      <DependentUpon>FormInputCommentCodeTx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInputCommentCodeTx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormInvoiceHardCopy.Designer.vb">
+      <DependentUpon>FormInvoiceHardCopy.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormInvoiceHardCopy.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormKPIChartCr.Designer.vb">
+      <DependentUpon>FormKPIChartCr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormKPIChartCr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogbook2.Designer.vb">
+      <DependentUpon>FormLogbook2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogbook2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormManagementMessage.Designer.vb">
+      <DependentUpon>FormManagementMessage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormManagementMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarketContactCP.Designer.vb">
+      <DependentUpon>FormMarketContactCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarketContactCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMarketContacts.Designer.vb">
+      <DependentUpon>FormMarketContacts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMarketContacts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormModifyTrackingNo.Designer.vb">
+      <DependentUpon>FormModifyTrackingNo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormModifyTrackingNo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportAccountingComp.Designer.vb">
+      <DependentUpon>FormReportAccountingComp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportAccountingComp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportAccountingComp2.Designer.vb">
+      <DependentUpon>FormReportAccountingComp2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportAccountingComp2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportAccountingFG2.Designer.vb">
+      <DependentUpon>FormReportAccountingFG2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportAccountingFG2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportKPIChart.Designer.vb">
+      <DependentUpon>FormReportKPIChart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportKPIChart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportKPIPivot.Designer.vb">
+      <DependentUpon>FormReportKPIPivot.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportKPIPivot.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogBook.Designer.vb">
+      <DependentUpon>FormLogBook.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogBook.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenu.designer.vb">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMenu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReadXML.Designer.vb">
+      <DependentUpon>FormReadXML.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReadXML.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormReportAccountingFG.Designer.vb">
+      <DependentUpon>FormReportAccountingFG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormReportAccountingFG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormRTurnoverExtendYearCur.designer.vb">
+      <DependentUpon>FormRTurnoverExtendYearCur.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormRTurnoverExtendYearCur.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSAO.Designer.vb">
+      <DependentUpon>FormSAO.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSAO.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSAOAllocation.Designer.vb">
+      <DependentUpon>FormSAOAllocation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSAOAllocation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSAOSIS.Designer.vb">
+      <DependentUpon>FormSAOSIS.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSAOSIS.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSASLSSL.Designer.vb">
+      <DependentUpon>FormSASLSSL.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSASLSSL.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSASLStatusComments.Designer.vb">
+      <DependentUpon>FormSASLStatusComments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSASLStatusComments.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSearchDocument.Designer.vb">
+      <DependentUpon>FormSearchDocument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSearchDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendIndividualEmail.Designer.vb">
+      <DependentUpon>FormSendIndividualEmail.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSendIndividualEmail.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendIndividualEmail2.Designer.vb">
+      <DependentUpon>FormSendIndividualEmail2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSendIndividualEmail2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendIndividualEmailCP.Designer.vb">
+      <DependentUpon>FormSendIndividualEmailCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSendIndividualEmailCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSendIndividualEmailCP2.Designer.vb">
+      <DependentUpon>FormSendIndividualEmailCP2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSendIndividualEmailCP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShipmentAndFreightReport.Designer.vb">
+      <DependentUpon>FormShipmentAndFreightReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormShipmentAndFreightReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowAllItems.Designer.vb">
+      <DependentUpon>FormShowAllItems.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowAllItems.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowAllItems2.Designer.vb">
+      <DependentUpon>FormShowAllItems2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowAllItems2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormShowAllItemsCP.Designer.vb">
+      <DependentUpon>FormShowAllItemsCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormShowAllItemsCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSPManager.Designer.vb">
+      <DependentUpon>FormSPManager.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSPManager.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTEUCP.Designer.vb">
+      <DependentUpon>FormTEUCP.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTEUCP.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTEUFG.Designer.vb">
+      <DependentUpon>FormTEUFG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTEUFG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTurnoverReport.Designer.vb">
+      <DependentUpon>FormTurnoverReport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormTurnoverReport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormUpdateCMMFFamily.Designer.vb">
+      <DependentUpon>FormUpdateCMMFFamily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormUpdateCMMFFamily.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorBuSp.Designer.vb">
+      <DependentUpon>FormVendorBuSp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorBuSp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorSP1.Designer.vb">
+      <DependentUpon>FormVendorSP1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorSP1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendorSPComp.Designer.vb">
+      <DependentUpon>FormVendorSPComp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorSPComp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWeeklyTx.Designer.vb">
+      <DependentUpon>FormWeeklyTx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormWeeklyTx.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormWORAllLines.Designer.vb">
+      <DependentUpon>FormWORAllLines.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormWORAllLines.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="General\UCFilterTx.Designer.vb">
+      <DependentUpon>UCFilterTx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCFilterTx.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="General\UCHelper.vb" />
+    <Compile Include="General\UCSortTx.designer.vb">
+      <DependentUpon>UCSortTx.vb</DependentUpon>
+    </Compile>
+    <Compile Include="General\UCSortTx.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="HelperClass.vb" />
+    <Compile Include="ImportDeliveryPostingDate.Designer.vb">
+      <DependentUpon>ImportDeliveryPostingDate.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportDeliveryPostingDate.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportIPLT.Designer.vb">
+      <DependentUpon>ImportIPLT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportIPLT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportOPLT.designer.vb">
+      <DependentUpon>ImportOPLT.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportOPLT.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportWOR.designer.vb">
+      <DependentUpon>ImportWOR.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportWOR.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ImportWORFG.Designer.vb">
+      <DependentUpon>ImportWORFG.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ImportWORFG.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Logger.vb" />
+    <Compile Include="Model\CMMFVolumeModel.vb" />
+    <Compile Include="Model\OPLTCOMMENTModel.vb" />
+    <Compile Include="Model\OPLTCOMMENTTXModel.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="PublicClass.vb" />
+    <Compile Include="ReportIPLTComp.Designer.vb">
+      <DependentUpon>ReportIPLTComp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ReportIPLTComp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Scoreboard.Designer.vb">
+      <DependentUpon>Scoreboard.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Scoreboard.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SharedClass.vb" />
+    <Compile Include="TestEnum.Designer.vb">
+      <DependentUpon>TestEnum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="TestEnum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VendorSPComp.Designer.vb">
+      <DependentUpon>VendorSPComp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="VendorSPComp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\UCHeader.resx">
+      <DependentUpon>UCHeader.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\UCToolstrip.resx">
+      <DependentUpon>UCToolstrip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddCategoryIssue.resx">
+      <DependentUpon>DialogAddCategoryIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddCommentMapping.resx">
+      <DependentUpon>DialogAddCommentMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogAddManagementMessage.resx">
+      <DependentUpon>DialogAddManagementMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogSAOAllocationInput.resx">
+      <DependentUpon>DialogSAOAllocationInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormABCSupplier.resx">
+      <DependentUpon>FormABCSupplier.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAccountingDocument.resx">
+      <DependentUpon>FormAccountingDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAssignPOSASLShipdate.resx">
+      <DependentUpon>FormAssignPOSASLShipdate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAutoGetEmail.resx">
+      <DependentUpon>FormAutoGetEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFolder.resx">
+      <DependentUpon>FormBrowseFolder.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseInvoicePackingList.resx">
+      <DependentUpon>FormBrowseInvoicePackingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormBrowseFolderCP.resx">
+      <DependentUpon>FormBrowseFolderCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCategoryIssue.resx">
+      <DependentUpon>FormCategoryIssue.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormChangePackingList.resx">
+      <DependentUpon>FormChangePackingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCMMFMissingLoadingCode.resx">
+      <DependentUpon>FormCMMFMissingLoadingCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCMMFVolume.resx">
+      <DependentUpon>FormCMMFVolume.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommentCodeTx.resx">
+      <DependentUpon>FormCommentCodeTx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommentConversion.resx">
+      <DependentUpon>FormCommentConversion.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCommentMapping.resx">
+      <DependentUpon>FormCommentMapping.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConvCustSAS.resx">
+      <DependentUpon>FormConvCustSAS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormConvertFamilySBU.resx">
+      <DependentUpon>FormConvertFamilySBU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCustomerFlow.resx">
+      <DependentUpon>FormCustomerFlow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeliveryHelper.resx">
+      <DependentUpon>FormDeliveryHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDeliveryHelper2.resx">
+      <DependentUpon>FormDeliveryHelper2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDocEmail.resx">
+      <DependentUpon>FormDocEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmailPreparation.resx">
+      <DependentUpon>FormEmailPreparation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmailPreparation2.resx">
+      <DependentUpon>FormEmailPreparation2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmailPreparationCP.resx">
+      <DependentUpon>FormEmailPreparationCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormEmailPreparationCP2.resx">
+      <DependentUpon>FormEmailPreparationCP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenerateChart.resx">
+      <DependentUpon>FormGenerateChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGenerateParetoChart.resx">
+      <DependentUpon>FormGenerateParetoChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetEmailFromExServer.resx">
+      <DependentUpon>FormGetEmailFromExServer.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetEmailFromExServerCP.resx">
+      <DependentUpon>FormGetEmailFromExServerCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetSelectedEmail.resx">
+      <DependentUpon>FormGetSelectedEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormGetSelectedEmailCP.resx">
+      <DependentUpon>FormGetSelectedEmailCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormHelper.resx">
+      <DependentUpon>FormHelper.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportAccountingHD.resx">
+      <DependentUpon>FormImportAccountingHD.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportBillingDocument.resx">
+      <DependentUpon>FormImportBillingDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportConfShip.resx">
+      <DependentUpon>FormImportConfShip.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportCustomerFlow.resx">
+      <DependentUpon>FormImportCustomerFlow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportDSV.resx">
+      <DependentUpon>FormImportDSV.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportEkko.resx">
+      <DependentUpon>FormImportEkko.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportForecastComponents.resx">
+      <DependentUpon>FormImportForecastComponents.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportHouseBill.resx">
+      <DependentUpon>FormImportHouseBill.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportMasterContactCP.resx">
+      <DependentUpon>FormImportMasterContactCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportMaterialMaster.resx">
+      <DependentUpon>FormImportMaterialMaster.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportMissingBillOfLading.resx">
+      <DependentUpon>FormImportMissingBillOfLading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportOPLT.resx">
+      <DependentUpon>FormImportOPLT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportOPLT3710.resx">
+      <DependentUpon>FormImportOPLT3710.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportOPLT3720.resx">
+      <DependentUpon>FormImportOPLT3720.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportOPLTComments.resx">
+      <DependentUpon>FormImportOPLTComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPackingList.resx">
+      <DependentUpon>FormImportPackingList.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPackingListBillofLading.resx">
+      <DependentUpon>FormImportPackingListBillofLading.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPanalpina.resx">
+      <DependentUpon>FormImportPanalpina.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportPO39.resx">
+      <DependentUpon>FormImportPO39.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportSAO.resx">
+      <DependentUpon>FormImportSAO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportSAOSIS.resx">
+      <DependentUpon>FormImportSAOSIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportTEUCMMFVolume.resx">
+      <DependentUpon>FormImportTEUCMMFVolume.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportVendorBUSP.resx">
+      <DependentUpon>FormImportVendorBUSP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportVendorSSM.resx">
+      <DependentUpon>FormImportVendorSSM.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormImportZZ0035.resx">
+      <DependentUpon>FormImportZZ0035.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInputCommentCodeTx.resx">
+      <DependentUpon>FormInputCommentCodeTx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormInvoiceHardCopy.resx">
+      <DependentUpon>FormInvoiceHardCopy.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormKPIChartCr.resx">
+      <DependentUpon>FormKPIChartCr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogbook2.resx">
+      <DependentUpon>FormLogbook2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormManagementMessage.resx">
+      <DependentUpon>FormManagementMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarketContactCP.resx">
+      <DependentUpon>FormMarketContactCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMarketContacts.resx">
+      <DependentUpon>FormMarketContacts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormModifyTrackingNo.resx">
+      <DependentUpon>FormModifyTrackingNo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportAccountingComp.resx">
+      <DependentUpon>FormReportAccountingComp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportAccountingComp2.resx">
+      <DependentUpon>FormReportAccountingComp2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportAccountingFG2.resx">
+      <DependentUpon>FormReportAccountingFG2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportKPIChart.resx">
+      <DependentUpon>FormReportKPIChart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportKPIPivot.resx">
+      <DependentUpon>FormReportKPIPivot.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogBook.resx">
+      <DependentUpon>FormLogBook.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenu.resx">
+      <DependentUpon>FormMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReadXML.resx">
+      <DependentUpon>FormReadXML.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormReportAccountingFG.resx">
+      <DependentUpon>FormReportAccountingFG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormRTurnoverExtendYearCur.resx">
+      <DependentUpon>FormRTurnoverExtendYearCur.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSAO.resx">
+      <DependentUpon>FormSAO.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSAOAllocation.resx">
+      <DependentUpon>FormSAOAllocation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSAOSIS.resx">
+      <DependentUpon>FormSAOSIS.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSASLSSL.resx">
+      <DependentUpon>FormSASLSSL.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSASLStatusComments.resx">
+      <DependentUpon>FormSASLStatusComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSearchDocument.resx">
+      <DependentUpon>FormSearchDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendIndividualEmail.resx">
+      <DependentUpon>FormSendIndividualEmail.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendIndividualEmail2.resx">
+      <DependentUpon>FormSendIndividualEmail2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendIndividualEmailCP.resx">
+      <DependentUpon>FormSendIndividualEmailCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSendIndividualEmailCP2.resx">
+      <DependentUpon>FormSendIndividualEmailCP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShipmentAndFreightReport.resx">
+      <DependentUpon>FormShipmentAndFreightReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowAllItems.resx">
+      <DependentUpon>FormShowAllItems.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowAllItems2.resx">
+      <DependentUpon>FormShowAllItems2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormShowAllItemsCP.resx">
+      <DependentUpon>FormShowAllItemsCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSPManager.resx">
+      <DependentUpon>FormSPManager.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTEUCP.resx">
+      <DependentUpon>FormTEUCP.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTEUFG.resx">
+      <DependentUpon>FormTEUFG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTurnoverReport.resx">
+      <DependentUpon>FormTurnoverReport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormUpdateCMMFFamily.resx">
+      <DependentUpon>FormUpdateCMMFFamily.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorBuSp.resx">
+      <DependentUpon>FormVendorBuSp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorSP1.resx">
+      <DependentUpon>FormVendorSP1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorSPComp.resx">
+      <DependentUpon>FormVendorSPComp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWeeklyTx.resx">
+      <DependentUpon>FormWeeklyTx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormWORAllLines.resx">
+      <DependentUpon>FormWORAllLines.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\UCFilterTx.resx">
+      <DependentUpon>UCFilterTx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="General\UCSortTx.resx">
+      <DependentUpon>UCSortTx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportDeliveryPostingDate.resx">
+      <DependentUpon>ImportDeliveryPostingDate.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportIPLT.resx">
+      <DependentUpon>ImportIPLT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportOPLT.resx">
+      <DependentUpon>ImportOPLT.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportWOR.resx">
+      <DependentUpon>ImportWOR.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ImportWORFG.resx">
+      <DependentUpon>ImportWORFG.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReportIPLTComp.resx">
+      <DependentUpon>ReportIPLTComp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scoreboard.resx">
+      <DependentUpon>Scoreboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TestEnum.resx">
+      <DependentUpon>TestEnum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VendorSPComp.resx">
+      <DependentUpon>VendorSPComp.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="My Project\app.manifest" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DJLib\DJLib.vbproj">
+      <Project>{744C93D1-44E9-4678-9315-25634864A836}</Project>
+      <Name>DJLib</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="ADODB">
+      <Guid>{00000205-0000-0010-8000-00AA006D2EA4}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>5</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="DAO">
+      <Guid>{00025E01-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Core">
+      <Guid>{2DF8D04C-5BFA-101B-BDE5-00AA0044DE52}</Guid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>4</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Access">
+      <Guid>{4AFFC9A0-5F99-101B-AF4E-00AA003F0F07}</Guid>
+      <VersionMajor>9</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="Microsoft.Office.Interop.Excel">
+      <Guid>{00020813-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>9</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="VBIDE">
+      <Guid>{0002E157-0000-0000-C000-000000000046}</Guid>
+      <VersionMajor>5</VersionMajor>
+      <VersionMinor>3</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>primary</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Lgc.ico" />
+    <Content Include="Lgc1.ico" />
+    <Content Include="Lgc2.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\view-refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clear Green Button16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Crystal_Clear_app_Login_Manager.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Datagrid.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\dialog-close.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\excel1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-bottom.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\go-top.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_560.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_561.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_562.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_563.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_583.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_584.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_585.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_586.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_587.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_588.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_634.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_635.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_636.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_804.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_805.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ieframe_806.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minus.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object-flip-horizontal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\object-flip-vertical.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\plusbox.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\stock_advanced-filter.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

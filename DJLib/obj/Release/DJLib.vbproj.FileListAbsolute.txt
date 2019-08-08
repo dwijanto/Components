@@ -1,0 +1,213 @@
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\DJLib.dll.config
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\DJLib.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\DJLib.pdb
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\DJLib.xml
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\Npgsql.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\Mono.Security.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\Npgsql.pdb
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\Npgsql.xml
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\de\Npgsql.resources.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\es\Npgsql.resources.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\fi\Npgsql.resources.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\fr\Npgsql.resources.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\ja\Npgsql.resources.dll
+D:\VB2010Work\RawMaterial\DJLib\bin\Release\zh-CN\Npgsql.resources.dll
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\ResolveAssemblyReference.cache
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\DJLib.Resources.resources
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\GenerateResource.read.1.tlog
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\GenerateResource.write.1.tlog
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\DJLib.dll
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\DJLib.xml
+D:\VB2010Work\RawMaterial\DJLib\obj\Release\DJLib.pdb
+D:\VB2010Work\DJLib\bin\Release\DJLib.dll.config
+D:\VB2010Work\DJLib\bin\Release\DJLib.dll
+D:\VB2010Work\DJLib\bin\Release\DJLib.pdb
+D:\VB2010Work\DJLib\bin\Release\DJLib.xml
+D:\VB2010Work\DJLib\bin\Release\Npgsql.dll
+D:\VB2010Work\DJLib\bin\Release\Mono.Security.dll
+D:\VB2010Work\DJLib\bin\Release\Npgsql.pdb
+D:\VB2010Work\DJLib\bin\Release\Npgsql.xml
+D:\VB2010Work\DJLib\bin\Release\de\Npgsql.resources.dll
+D:\VB2010Work\DJLib\bin\Release\es\Npgsql.resources.dll
+D:\VB2010Work\DJLib\bin\Release\fi\Npgsql.resources.dll
+D:\VB2010Work\DJLib\bin\Release\fr\Npgsql.resources.dll
+D:\VB2010Work\DJLib\bin\Release\ja\Npgsql.resources.dll
+D:\VB2010Work\DJLib\bin\Release\zh-CN\Npgsql.resources.dll
+D:\VB2010Work\DJLib\obj\Release\ResolveAssemblyReference.cache
+D:\VB2010Work\DJLib\obj\Release\DJLib.Resources.resources
+D:\VB2010Work\DJLib\obj\Release\GenerateResource.read.1.tlog
+D:\VB2010Work\DJLib\obj\Release\GenerateResource.write.1.tlog
+D:\VB2010Work\DJLib\obj\Release\DJLib.dll
+D:\VB2010Work\DJLib\obj\Release\DJLib.xml
+D:\VB2010Work\DJLib\obj\Release\DJLib.pdb
+D:\VB2010Work\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+E:\Office\VB2010Work\DJLib\obj\Release\ResolveAssemblyReference.cache
+E:\Office\VB2010Work\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+E:\Office\VB2010Work\DJLib\obj\Release\DJLib.Resources.resources
+E:\Office\VB2010Work\DJLib\obj\Release\GenerateResource.read.1.tlog
+E:\Office\VB2010Work\DJLib\obj\Release\GenerateResource.write.1.tlog
+E:\Office\VB2010Work\DJLib\obj\Release\DJLib.dll
+E:\Office\VB2010Work\DJLib\obj\Release\DJLib.xml
+E:\Office\VB2010Work\DJLib\obj\Release\DJLib.pdb
+E:\Office\VB2010Work\DJLib\bin\Release\DJLib.dll.config
+E:\Office\VB2010Work\DJLib\bin\Release\DJLib.dll
+E:\Office\VB2010Work\DJLib\bin\Release\DJLib.pdb
+E:\Office\VB2010Work\DJLib\bin\Release\DJLib.xml
+E:\Office\VB2010Work\DJLib\bin\Release\Npgsql.dll
+E:\Office\VB2010Work\DJLib\bin\Release\Mono.Security.dll
+E:\Office\VB2010Work\DJLib\bin\Release\Npgsql.pdb
+E:\Office\VB2010Work\DJLib\bin\Release\Npgsql.xml
+E:\Office\VB2010Work\DJLib\bin\Release\de\Npgsql.resources.dll
+E:\Office\VB2010Work\DJLib\bin\Release\es\Npgsql.resources.dll
+E:\Office\VB2010Work\DJLib\bin\Release\fi\Npgsql.resources.dll
+E:\Office\VB2010Work\DJLib\bin\Release\fr\Npgsql.resources.dll
+E:\Office\VB2010Work\DJLib\bin\Release\ja\Npgsql.resources.dll
+E:\Office\VB2010Work\DJLib\bin\Release\zh-CN\Npgsql.resources.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\ResolveAssemblyReference.cache
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\DJLib.Resources.resources
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\GenerateResource.read.1.tlog
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\GenerateResource.write.1.tlog
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\DJLib.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\DJLib.xml
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\obj\Release\DJLib.pdb
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\DJLib.dll.config
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\DJLib.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\DJLib.pdb
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\DJLib.xml
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\Mono.Security.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\Npgsql.pdb
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\Npgsql.xml
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\de\Npgsql.resources.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\es\Npgsql.resources.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\fi\Npgsql.resources.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\fr\Npgsql.resources.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\ja\Npgsql.resources.dll
+C:\Users\dwijanto\Documents\Visual Studio 2010\Projects\DJLib\bin\Release\zh-CN\Npgsql.resources.dll
+C:\VBProject\DJLib\bin\Release\DJLib.dll.config
+C:\VBProject\DJLib\bin\Release\DJLib.dll
+C:\VBProject\DJLib\bin\Release\DJLib.pdb
+C:\VBProject\DJLib\bin\Release\DJLib.xml
+C:\VBProject\DJLib\obj\Release\ResolveAssemblyReference.cache
+C:\VBProject\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\VBProject\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+C:\VBProject\DJLib\obj\Release\DJLib.Host.resources
+C:\VBProject\DJLib\obj\Release\DJLib.Resources.resources
+C:\VBProject\DJLib\obj\Release\GenerateResource.read.1.tlog
+C:\VBProject\DJLib\obj\Release\GenerateResource.write.1.tlog
+C:\VBProject\DJLib\obj\Release\DJLib.dll
+C:\VBProject\DJLib\obj\Release\DJLib.xml
+C:\VBProject\DJLib\obj\Release\DJLib.pdb
+C:\VB2010\DJLib\obj\Release\ResolveAssemblyReference.cache
+C:\VB2010\DJLib\obj\Release\Interop.Microsoft.Office.Core.dll
+C:\VB2010\DJLib\obj\Release\Interop.Microsoft.Office.Interop.Excel.dll
+C:\VB2010\DJLib\obj\Release\Interop.VBIDE.dll
+C:\VB2010\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\VB2010\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+C:\VB2010\DJLib\obj\Release\DJLib.Host.resources
+C:\VB2010\DJLib\obj\Release\DJLib.Resources.resources
+C:\VB2010\DJLib\obj\Release\GenerateResource.read.1.tlog
+C:\VB2010\DJLib\obj\Release\GenerateResource.write.1.tlog
+C:\VB2010\DJLib\bin\Release\DJLib.dll.config
+C:\VB2010\DJLib\bin\Release\DJLib.dll
+C:\VB2010\DJLib\bin\Release\DJLib.pdb
+C:\VB2010\DJLib\bin\Release\DJLib.xml
+C:\VB2010\DJLib\obj\Release\DJLib.dll
+C:\VB2010\DJLib\obj\Release\DJLib.xml
+C:\VB2010\DJLib\obj\Release\DJLib.pdb
+D:\VB2010Work\NewAppWithDbsource\DJLib\bin\Release\DJLib.dll.config
+D:\VB2010Work\NewAppWithDbsource\DJLib\bin\Release\DJLib.dll
+D:\VB2010Work\NewAppWithDbsource\DJLib\bin\Release\DJLib.pdb
+D:\VB2010Work\NewAppWithDbsource\DJLib\bin\Release\DJLib.xml
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\ResolveAssemblyReference.cache
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.Host.resources
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.Resources.resources
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\GenerateResource.read.1.tlog
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\GenerateResource.write.1.tlog
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.dll
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.xml
+D:\VB2010Work\NewAppWithDbsource\DJLib\obj\Release\DJLib.pdb
+D:\VB2010Work\HR\DJLib\bin\Release\DJLib.dll.config
+D:\VB2010Work\HR\DJLib\bin\Release\DJLib.dll
+D:\VB2010Work\HR\DJLib\bin\Release\DJLib.pdb
+D:\VB2010Work\HR\DJLib\bin\Release\DJLib.xml
+D:\VB2010Work\HR\DJLib\obj\Release\ResolveAssemblyReference.cache
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.Host.resources
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.Resources.resources
+D:\VB2010Work\HR\DJLib\obj\Release\GenerateResource.read.1.tlog
+D:\VB2010Work\HR\DJLib\obj\Release\GenerateResource.write.1.tlog
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.dll
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.xml
+D:\VB2010Work\HR\DJLib\obj\Release\DJLib.pdb
+D:\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.dll.config
+D:\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.dll
+D:\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.pdb
+D:\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.xml
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\ResolveAssemblyReference.cache
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.Host.resources
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.Resources.resources
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\GenerateResource.read.1.tlog
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\GenerateResource.write.1.tlog
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.dll
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.xml
+D:\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.pdb
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.dll.config
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.dll
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.pdb
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\bin\Release\DJLib.xml
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\ResolveAssemblyReference.cache
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.Host.resources
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.Resources.resources
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\GenerateResource.read.1.tlog
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\GenerateResource.write.1.tlog
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.dll
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.xml
+C:\MyWork\VB2010Work\VPOrderStatus\DJLib\obj\Release\DJLib.pdb
+C:\MyWork\VB2010Work\Components\DJLib\bin\Release\DJLib.dll.config
+C:\MyWork\VB2010Work\Components\DJLib\bin\Release\DJLib.dll
+C:\MyWork\VB2010Work\Components\DJLib\bin\Release\DJLib.pdb
+C:\MyWork\VB2010Work\Components\DJLib\bin\Release\DJLib.xml
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\ResolveAssemblyReference.cache
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.Host.resources
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.Resources.resources
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\GenerateResource.read.1.tlog
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\GenerateResource.write.1.tlog
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.dll
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.xml
+C:\MyWork\VB2010Work\Components\DJLib\obj\Release\DJLib.pdb
+C:\Work\vb2010\Components\DJLib\bin\Release\DJLib.dll.config
+C:\Work\vb2010\Components\DJLib\bin\Release\DJLib.dll
+C:\Work\vb2010\Components\DJLib\bin\Release\DJLib.pdb
+C:\Work\vb2010\Components\DJLib\bin\Release\DJLib.xml
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.Host.resources
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.Resources.resources
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.vbproj.GenerateResource.Cache
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.dll
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.xml
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.pdb
+C:\Work\vb2010\Components\DJLib\obj\Release\DJLib.vbprojResolveAssemblyReference.cache
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\bin\Release\DJLib.dll.config
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\bin\Release\DJLib.dll
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\bin\Release\DJLib.pdb
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\bin\Release\DJLib.xml
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.vbprojResolveAssemblyReference.cache
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.vbproj.ResolveComReference.cache
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.DialogAdvancedFilter.resources
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.Host.resources
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.Resources.resources
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.vbproj.GenerateResource.Cache
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.dll
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.xml
+C:\Users\dlie\OneDrive\Projects\VB2010\Components\DJLib\obj\Release\DJLib.pdb

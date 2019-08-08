@@ -1,0 +1,133 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="My" GeneratedClassName="MySettings" UseMySettingsClassName="true">
+  <Profiles />
+  <Settings>
+    <Setting Name="con1" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=hon03nt;port=5432;database=LogisticDb</Value>
+    </Setting>
+    <Setting Name="con2" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=localhost;port=5432;database=DBTest201009</Value>
+    </Setting>
+    <Setting Name="validationkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">C50B3C89CB21F4F1422FF158A5B42D0E8DB8CB5CDA1742572A487D9401E3400267682B202B746511891C1BAF47F8D25C07F6C39A104696DB51F17C529AD3CABE</Value>
+    </Setting>
+    <Setting Name="decriptionkey" Type="System.String" Scope="User">
+      <Value Profile="(Default)">8A9BE8FD67AF6979E7D20198CFEA50DD3D3799C77AF2B72F</Value>
+    </Setting>
+    <Setting Name="validation" Type="System.String" Scope="User">
+      <Value Profile="(Default)">SHA1</Value>
+    </Setting>
+    <Setting Name="connectionstring" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=localhost;port=5433;database=mydb</Value>
+    </Setting>
+    <Setting Name="oExCon" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ODBC;DSN=PostgreSQLHon10-0046D;</Value>
+    </Setting>
+    <Setting Name="MenuStripGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="MenuStripGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DimGray</Value>
+    </Setting>
+    <Setting Name="MenuStripForeColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WhiteSmoke</Value>
+    </Setting>
+    <Setting Name="MenuItemPressedGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Maroon</Value>
+    </Setting>
+    <Setting Name="MenuItemPressedGradientMiddle" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Maroon</Value>
+    </Setting>
+    <Setting Name="MenuItemPressedGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Silver</Value>
+    </Setting>
+    <Setting Name="MenuItemSelectedGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="MenuItemSelectedGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="MenuItemSelected" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ImageMarginGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Maroon</Value>
+    </Setting>
+    <Setting Name="ImageMarginGradientMiddle" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WhiteSmoke</Value>
+    </Setting>
+    <Setting Name="ImageMarginGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WhiteSmoke</Value>
+    </Setting>
+    <Setting Name="MenuBorder" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="MenuItemBorder" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ToolStripBorder" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="ToolStripContentPanelGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Maroon</Value>
+    </Setting>
+    <Setting Name="ToolStripContentPanelGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">HighlightText</Value>
+    </Setting>
+    <Setting Name="ToolStripDropDownBackground" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">LightGray</Value>
+    </Setting>
+    <Setting Name="ToolStripGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">HighlightText</Value>
+    </Setting>
+    <Setting Name="ToolStripGradientMiddle" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">HighlightText</Value>
+    </Setting>
+    <Setting Name="ToolStripGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">HighlightText</Value>
+    </Setting>
+    <Setting Name="StatusStripGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="StatusStripGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">DimGray</Value>
+    </Setting>
+    <Setting Name="ToolStripForeColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Black</Value>
+    </Setting>
+    <Setting Name="StatusStripForeColor" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">WhiteSmoke</Value>
+    </Setting>
+    <Setting Name="ToolStripPanelGradientBegin" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">Gold</Value>
+    </Setting>
+    <Setting Name="ToolStripPanelGradientEnd" Type="System.Drawing.Color" Scope="User">
+      <Value Profile="(Default)">InactiveCaption</Value>
+    </Setting>
+    <Setting Name="con3" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=hon10-0046D;port=5432;database=hr</Value>
+    </Setting>
+    <Setting Name="con4" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=localhost;port=5432;database=hr</Value>
+    </Setting>
+    <Setting Name="oExConLive" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ODBC;DSN=PostgreSQLhon03nt;</Value>
+    </Setting>
+    <Setting Name="oExConTest" Type="System.String" Scope="User">
+      <Value Profile="(Default)">ODBC;DSN=PostgreSQLHon10-0046D;</Value>
+    </Setting>
+    <Setting Name="con5" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=hon07nt;port=5432;database=hr</Value>
+    </Setting>
+    <Setting Name="con6" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Host=hon10-0046D;port=5433;database=LogisticDb20111202</Value>
+    </Setting>
+    <Setting Name="connectionstring1" Type="(Connection string)" Scope="Application">
+      <DesignTimeValue Profile="(Default)">&lt;?xml version="1.0" encoding="utf-16"?&gt;
+&lt;SerializableConnectionString xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+  &lt;ConnectionString&gt;Host=hon10-0046D;port=5432;database=LogisticDb20111202&lt;/ConnectionString&gt;
+&lt;/SerializableConnectionString&gt;</DesignTimeValue>
+      <Value Profile="(Default)">Host=hon10-0046D;port=5432;database=LogisticDb20111202</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

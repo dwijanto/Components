@@ -6,6 +6,7 @@ Imports Components.SharedClass
 Public Class FormImportEkko
 
     Dim mythread As New Thread(AddressOf doWork)
+
     Dim openfiledialog1 As New OpenFileDialog
     Delegate Sub ProgressReportDelegate(ByVal id As Integer, ByVal message As String)
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
@@ -115,6 +116,8 @@ Public Class FormImportEkko
 
                 Case 3
                     ToolStripProgressBar1.Style = ProgressBarStyle.Continuous
+                Case 8
+                    Label2.Text = message
             End Select
 
         End If
@@ -144,4 +147,25 @@ Public Class FormImportEkko
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged
 
     End Sub
+
+    Private Sub FormImportEkko_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+        showEkkoLastCreationDate()
+    End Sub
+
+    Private Sub showEkkoLastCreationDate()
+        If Not mythread.IsAlive Then
+            mythread = New Thread(AddressOf doQuery)
+            mythread.Start()        
+        Else
+        MessageBox.Show("Process still running. Please Wait!")
+        End If
+    End Sub
+
+    Private Sub doQuery()
+        Dim myresult As Date
+        If DbAdapter1.ExecuteScalar("select getekkolastcreatedon();", myresult) Then
+            ProgressReport(8, String.Format("Latest Ekko Creation Date : {0:dd-MMM-yyyy} ", myresult))
+        End If
+    End Sub
+
 End Class

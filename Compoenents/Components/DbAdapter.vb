@@ -1220,7 +1220,7 @@ Public Class DbAdapter
         Return result
     End Function
     Public Function checkproglock(ByVal programname As String) As Boolean
-        Dim result As Object
+        Dim result As Object = Nothing
         Using conn As New NpgsqlConnection(Connectionstring)
             conn.Open()
             Dim cmd As NpgsqlCommand = New NpgsqlCommand("checkproglock", conn)

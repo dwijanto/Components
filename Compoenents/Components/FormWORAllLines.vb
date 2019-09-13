@@ -1,6 +1,8 @@
 ﻿Imports Components.PublicClass
 Imports DJLib.Dbtools
+Imports System.Threading
 Public Class FormWORAllLines
+    Dim mythread As New Thread(AddressOf doQuery)
     Dim AccessTableName As String = "tbl_WOR_FG"
     Dim AccessDbFullPath As String
     'Dim myreport As ExportToExcelFile
@@ -67,27 +69,55 @@ Public Class FormWORAllLines
     End Sub
 
     Private Sub PivotTable(ByRef sender As Object, ByRef e As EventArgs)
-            'Throw New NotImplementedException
+        'Throw New NotImplementedException
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton2.CheckedChanged, RadioButton1.CheckedChanged
-            DateTimePicker1.Enabled = RadioButton2.Checked
-            DateTimePicker2.Enabled = RadioButton2.Checked
+        DateTimePicker1.Enabled = RadioButton2.Checked
+        DateTimePicker2.Enabled = RadioButton2.Checked
     End Sub
 
     Private Sub FormWORAllLines_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
+        showEkkoLastCreationDate()
     End Sub
 
+    Private Sub showEkkoLastCreationDate()
+        If Not mythread.IsAlive Then
+            mythread = New Thread(AddressOf doQuery)
+            mythread.Start()
+        Else
+            MessageBox.Show("Process still running. Please Wait!")
+        End If
+    End Sub
+    Private Sub ProgressReport(ByVal id As Integer, ByVal message As String)
+        If Me.InvokeRequired Then
+            Dim d As New ProgressReportDelegate(AddressOf ProgressReport)
+            Me.Invoke(d, New Object() {id, message})
+        Else
+            Select Case id
+                
+                Case 8
+                    Label3.Text = message
+            End Select
+
+        End If
+
+    End Sub
+    Private Sub doQuery()
+        Dim myresult As Date
+        If DbAdapter1.ExecuteScalar("select getekkolastcreatedon();", myresult) Then
+            ProgressReport(8, String.Format("Latest Ekko Creation Date : {0:dd-MMM-yyyy} ", myresult))
+        End If
+    End Sub
     Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBox1.CheckedChanged
-            TextBox1.Visible = CheckBox1.Checked
-            Button2.Visible = CheckBox1.Checked
+        TextBox1.Visible = CheckBox1.Checked
+        Button2.Visible = CheckBox1.Checked
     End Sub
 
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
 
-            If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
-                TextBox1.Text = OpenFileDialog1.FileName
-            End If
+        If OpenFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            TextBox1.Text = OpenFileDialog1.FileName
+        End If
     End Sub
 End Class

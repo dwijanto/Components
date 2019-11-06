@@ -477,3 +477,6 @@ C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\C
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.vbproj.GenerateResource.Cache
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\bin\Debug\Npgsql.dll
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\bin\Debug\Mono.Security.dll
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.FormSBU.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.FormActivity.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.DialogActivity.resources

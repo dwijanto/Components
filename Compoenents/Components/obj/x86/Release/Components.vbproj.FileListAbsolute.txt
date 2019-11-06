@@ -477,3 +477,6 @@ C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.pdb
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\bin\Release\Npgsql.dll
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\bin\Release\Mono.Security.dll
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormSBU.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.DialogActivity.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormActivity.resources

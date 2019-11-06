@@ -1,5 +1,5 @@
 ﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
-Partial Class FormCMMFVolume
+Partial Class FormActivity
     Inherits System.Windows.Forms.Form
 
     'Form overrides dispose to clean up the component list.
@@ -22,7 +22,15 @@ Partial Class FormCMMFVolume
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormCMMFVolume))
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(FormActivity))
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column4 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column5 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.ToolStrip1 = New System.Windows.Forms.ToolStrip()
         Me.ToolStripButton1 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton2 = New System.Windows.Forms.ToolStripButton()
@@ -32,33 +40,105 @@ Partial Class FormCMMFVolume
         Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
         Me.ToolStripLabel1 = New System.Windows.Forms.ToolStripLabel()
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
-        Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
-        Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
-        Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.DataGridViewTextBoxColumn3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.ToolStrip1.SuspendLayout()
-        Me.StatusStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.ToolStrip1.SuspendLayout()
+        Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
+        '
+        'ToolStripContainer1
+        '
+        '
+        'ToolStripContainer1.ContentPanel
+        '
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView1)
+        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(1091, 503)
+        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
+        Me.ToolStripContainer1.Name = "ToolStripContainer1"
+        Me.ToolStripContainer1.Size = New System.Drawing.Size(1091, 528)
+        Me.ToolStripContainer1.TabIndex = 20
+        Me.ToolStripContainer1.Text = "ToolStripContainer1"
+        '
+        'ToolStripContainer1.TopToolStripPanel
+        '
+        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.ToolStrip1)
+        '
+        'DataGridView1
+        '
+        Me.DataGridView1.AllowUserToAddRows = False
+        Me.DataGridView1.AllowUserToDeleteRows = False
+        Me.DataGridView1.AllowUserToOrderColumns = True
+        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
+        Me.DataGridView1.ColumnHeadersHeight = 30
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column3, Me.Column4, Me.Column2, Me.Column7, Me.Column5})
+        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
+        Me.DataGridView1.Name = "DataGridView1"
+        Me.DataGridView1.ReadOnly = True
+        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
+        Me.DataGridView1.Size = New System.Drawing.Size(1091, 503)
+        Me.DataGridView1.TabIndex = 0
+        '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "activitycode"
+        Me.Column1.HeaderText = "Activity Code"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "activityname"
+        Me.Column3.HeaderText = "Activity Name"
+        Me.Column3.Name = "Column3"
+        Me.Column3.ReadOnly = True
+        Me.Column3.Width = 200
+        '
+        'Column4
+        '
+        Me.Column4.DataPropertyName = "sbuname"
+        Me.Column4.HeaderText = "SBU Name"
+        Me.Column4.Name = "Column4"
+        Me.Column4.ReadOnly = True
+        Me.Column4.Width = 180
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "sbunamesp"
+        Me.Column2.HeaderText = "SBU Name SP"
+        Me.Column2.Name = "Column2"
+        Me.Column2.ReadOnly = True
+        Me.Column2.Width = 180
+        '
+        'Column7
+        '
+        Me.Column7.DataPropertyName = "sbunamelg"
+        Me.Column7.HeaderText = "SBU Name LG"
+        Me.Column7.Name = "Column7"
+        Me.Column7.ReadOnly = True
+        Me.Column7.Width = 180
+        '
+        'Column5
+        '
+        Me.Column5.DataPropertyName = "bu"
+        Me.Column5.HeaderText = "BU"
+        Me.Column5.Name = "Column5"
+        Me.Column5.ReadOnly = True
+        Me.Column5.Width = 180
         '
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripTextBox1, Me.ToolStripButton6, Me.ToolStripButton7})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripTextBox1})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(566, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(434, 25)
         Me.ToolStrip1.TabIndex = 16
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -79,7 +159,6 @@ Partial Class FormCMMFVolume
         Me.ToolStripButton2.Name = "ToolStripButton2"
         Me.ToolStripButton2.Size = New System.Drawing.Size(49, 22)
         Me.ToolStripButton2.Text = "Update"
-        Me.ToolStripButton2.Visible = False
         '
         'ToolStripButton3
         '
@@ -124,37 +203,19 @@ Partial Class FormCMMFVolume
         Me.ToolStripTextBox1.Name = "ToolStripTextBox1"
         Me.ToolStripTextBox1.Size = New System.Drawing.Size(150, 25)
         '
-        'ToolStripButton6
-        '
-        Me.ToolStripButton6.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
-        Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(89, 22)
-        Me.ToolStripButton6.Text = "Export To Excel"
-        '
-        'ToolStripButton7
-        '
-        Me.ToolStripButton7.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
-        Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
-        Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(92, 22)
-        Me.ToolStripButton7.Text = "Import Text File"
-        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripProgressBar1})
-        Me.StatusStrip1.Location = New System.Drawing.Point(0, 470)
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 528)
         Me.StatusStrip1.Name = "StatusStrip1"
-        Me.StatusStrip1.Size = New System.Drawing.Size(837, 22)
-        Me.StatusStrip1.TabIndex = 15
+        Me.StatusStrip1.Size = New System.Drawing.Size(1091, 22)
+        Me.StatusStrip1.TabIndex = 19
         Me.StatusStrip1.Text = "StatusStrip1"
         '
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(720, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(974, 17)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.Text = "ToolStripStatusLabel1"
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -164,93 +225,31 @@ Partial Class FormCMMFVolume
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
         '
-        'ToolStripContainer1
-        '
-        '
-        'ToolStripContainer1.ContentPanel
-        '
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DataGridView1)
-        Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(837, 445)
-        Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.ToolStripContainer1.Location = New System.Drawing.Point(0, 0)
-        Me.ToolStripContainer1.Name = "ToolStripContainer1"
-        Me.ToolStripContainer1.Size = New System.Drawing.Size(837, 470)
-        Me.ToolStripContainer1.TabIndex = 18
-        Me.ToolStripContainer1.Text = "ToolStripContainer1"
-        '
-        'ToolStripContainer1.TopToolStripPanel
-        '
-        Me.ToolStripContainer1.TopToolStripPanel.Controls.Add(Me.ToolStrip1)
-        '
-        'DataGridView1
-        '
-        Me.DataGridView1.AllowUserToAddRows = False
-        Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.ColumnHeadersHeight = 30
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2})
-        Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(0, 0)
-        Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(837, 445)
-        Me.DataGridView1.TabIndex = 0
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "cmmf"
-        Me.Column1.HeaderText = "CMMF"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "avgvolume"
-        Me.Column2.HeaderText = "Volume"
-        Me.Column2.Name = "Column2"
-        Me.Column2.Width = 200
-        '
-        'DataGridViewTextBoxColumn1
-        '
-        Me.DataGridViewTextBoxColumn1.DataPropertyName = "cmmf"
-        Me.DataGridViewTextBoxColumn1.HeaderText = "CMMF"
-        Me.DataGridViewTextBoxColumn1.Name = "DataGridViewTextBoxColumn1"
-        '
-        'DataGridViewTextBoxColumn2
-        '
-        Me.DataGridViewTextBoxColumn2.DataPropertyName = "materialdesc"
-        Me.DataGridViewTextBoxColumn2.HeaderText = "Material Description"
-        Me.DataGridViewTextBoxColumn2.Name = "DataGridViewTextBoxColumn2"
-        Me.DataGridViewTextBoxColumn2.Width = 300
-        '
-        'DataGridViewTextBoxColumn3
-        '
-        Me.DataGridViewTextBoxColumn3.DataPropertyName = "avgvolume"
-        Me.DataGridViewTextBoxColumn3.HeaderText = "Volume"
-        Me.DataGridViewTextBoxColumn3.Name = "DataGridViewTextBoxColumn3"
-        Me.DataGridViewTextBoxColumn3.Width = 150
-        '
-        'FormCMMFVolume
+        'FormActivity
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(837, 492)
+        Me.ClientSize = New System.Drawing.Size(1091, 550)
         Me.Controls.Add(Me.ToolStripContainer1)
         Me.Controls.Add(Me.StatusStrip1)
-        Me.Name = "FormCMMFVolume"
-        Me.Text = "FormCMMFVolume"
-        Me.ToolStrip1.ResumeLayout(False)
-        Me.ToolStrip1.PerformLayout()
-        Me.StatusStrip1.ResumeLayout(False)
-        Me.StatusStrip1.PerformLayout()
+        Me.Name = "FormActivity"
+        Me.Text = "FormActivity"
         Me.ToolStripContainer1.ContentPanel.ResumeLayout(False)
         Me.ToolStripContainer1.TopToolStripPanel.ResumeLayout(False)
         Me.ToolStripContainer1.TopToolStripPanel.PerformLayout()
         Me.ToolStripContainer1.ResumeLayout(False)
         Me.ToolStripContainer1.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ToolStrip1.ResumeLayout(False)
+        Me.ToolStrip1.PerformLayout()
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
+    Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
+    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents ToolStrip1 As System.Windows.Forms.ToolStrip
     Friend WithEvents ToolStripButton1 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton2 As System.Windows.Forms.ToolStripButton
@@ -258,18 +257,15 @@ Partial Class FormCMMFVolume
     Friend WithEvents ToolStripButton4 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripButton5 As System.Windows.Forms.ToolStripButton
     Friend WithEvents ToolStripSeparator1 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
+    Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
-    Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
-    Friend WithEvents ToolStripLabel1 As System.Windows.Forms.ToolStripLabel
-    Friend WithEvents ToolStripTextBox1 As System.Windows.Forms.ToolStripTextBox
-    Friend WithEvents DataGridViewTextBoxColumn1 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridViewTextBoxColumn3 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column3 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column4 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents ToolStripButton6 As System.Windows.Forms.ToolStripButton
-    Friend WithEvents ToolStripButton7 As System.Windows.Forms.ToolStripButton
+    Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column5 As System.Windows.Forms.DataGridViewTextBoxColumn
 End Class

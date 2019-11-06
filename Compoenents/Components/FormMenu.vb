@@ -67,6 +67,8 @@ Public Class FormMenu
         AddHandler CommentMappingToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler UpdateCMMFFamilysq01F037FGPuToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler CMMFVolumeToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler MasterSBUToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler MasterActivityToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
     End Sub
     Private Sub FormMenu_Load(ByVal sender As Object, ByVal e As System.EventArgs)
         Try
@@ -200,7 +202,7 @@ Public Class FormMenu
 
 
 
- 
+
     Private Sub LogBookV2ToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LogBookV2ToolStripMenuItem.Click
 
     End Sub
@@ -282,6 +284,14 @@ Public Class FormMenu
     End Sub
 
     Private Sub ImportPackingListToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ImportPackingListToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub MasterSBUToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterSBUToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub MasterActivityToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterActivityToolStripMenuItem.Click
 
     End Sub
 End Class

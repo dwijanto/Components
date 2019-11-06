@@ -136,12 +136,20 @@
     <Compile Include="Class\ManagementMessageAdapter.vb" />
     <Compile Include="Class\ModelAdapter.vb" />
     <Compile Include="Class\RTurnoverExtendYearCur.vb" />
+    <Compile Include="Controller\ActivityController.vb" />
     <Compile Include="Controller\CMMFVolumeController.vb" />
     <Compile Include="Controller\OPLTCOMMENTController.vb" />
     <Compile Include="Controller\OPLTCOMMENTTXController.vb" />
+    <Compile Include="Controller\SBUController.vb" />
     <Compile Include="Controller\TEUCPController.vb" />
     <Compile Include="Controller\TEUFGController.vb" />
     <Compile Include="DbAdapter.vb" />
+    <Compile Include="DialogActivity.Designer.vb">
+      <DependentUpon>DialogActivity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogActivity.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DialogAddCategoryIssue.Designer.vb">
       <DependentUpon>DialogAddCategoryIssue.vb</DependentUpon>
     </Compile>
@@ -184,6 +192,12 @@
       <DependentUpon>FormAccountingDocument.vb</DependentUpon>
     </Compile>
     <Compile Include="FormAccountingDocument.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormActivity.Designer.vb">
+      <DependentUpon>FormActivity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormActivity.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormAssignPOSASLShipdate.Designer.vb">
@@ -648,6 +662,12 @@
     <Compile Include="FormSASLStatusComments.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormSBU.Designer.vb">
+      <DependentUpon>FormSBU.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormSBU.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormSearchDocument.Designer.vb">
       <DependentUpon>FormSearchDocument.vb</DependentUpon>
     </Compile>
@@ -807,9 +827,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Logger.vb" />
+    <Compile Include="Model\ActivityModel.vb" />
     <Compile Include="Model\CMMFVolumeModel.vb" />
     <Compile Include="Model\OPLTCOMMENTModel.vb" />
     <Compile Include="Model\OPLTCOMMENTTXModel.vb" />
+    <Compile Include="Model\SBUModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -859,6 +881,9 @@
     <EmbeddedResource Include="Admin\UCToolstrip.resx">
       <DependentUpon>UCToolstrip.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DialogActivity.resx">
+      <DependentUpon>DialogActivity.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DialogAddCategoryIssue.resx">
       <DependentUpon>DialogAddCategoryIssue.vb</DependentUpon>
     </EmbeddedResource>
@@ -876,6 +901,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormAccountingDocument.resx">
       <DependentUpon>FormAccountingDocument.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormActivity.resx">
+      <DependentUpon>FormActivity.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormAssignPOSASLShipdate.resx">
       <DependentUpon>FormAssignPOSASLShipdate.vb</DependentUpon>
@@ -1107,6 +1135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSASLStatusComments.resx">
       <DependentUpon>FormSASLStatusComments.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSBU.resx">
+      <DependentUpon>FormSBU.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchDocument.resx">
       <DependentUpon>FormSearchDocument.vb</DependentUpon>

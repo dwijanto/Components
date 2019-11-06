@@ -97,8 +97,10 @@ Partial Class FormMenu
         Me.SPManagerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CommentMappingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerFlowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterSBUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.MasterActivityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -115,7 +117,7 @@ Partial Class FormMenu
         '
         Me.TransactionToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LogBookToolStripMenuItem, Me.WeeklyFigureToolStripMenuItem, Me.CommentConversionToolStripMenuItem, Me.SASLStatusCommentsToolStripMenuItem, Me.CommentCodeTxToolStripMenuItem, Me.LogBookV2ToolStripMenuItem, Me.CMMFVolumeToolStripMenuItem})
         Me.TransactionToolStripMenuItem.Name = "TransactionToolStripMenuItem"
-        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(81, 20)
+        Me.TransactionToolStripMenuItem.Size = New System.Drawing.Size(80, 20)
         Me.TransactionToolStripMenuItem.Text = "Transaction"
         '
         'LogBookToolStripMenuItem
@@ -178,7 +180,7 @@ Partial Class FormMenu
         '
         Me.ComponentsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportWeeklyReportComponentsToolStripMenuItem, Me.ImportIPLTComponentsToolStripMenuItem, Me.ImportOPLTComponentsToolStripMenuItem, Me.ImportDeliveryPostingToolStripMenuItem})
         Me.ComponentsToolStripMenuItem.Name = "ComponentsToolStripMenuItem"
-        Me.ComponentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ComponentsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.ComponentsToolStripMenuItem.Text = "WOR"
         '
         'ImportWeeklyReportComponentsToolStripMenuItem
@@ -216,7 +218,7 @@ Partial Class FormMenu
         '
         Me.FinishGoodsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportWeeklyReportFGToolStripMenuItem, Me.ImportEKKOToolStripMenuItem, Me.ImportConfirmationShipmentToolStripMenuItem, Me.ImportOPLTZZA013ToolStripMenuItem, Me.ImportMiroToolStripMenuItem, Me.ToolStripSeparator1, Me.ImportAccountingHeadersq01ToolStripMenuItem, Me.ImportPackingListToolStripMenuItem, Me.ImportBillingDocumentToolStripMenuItem, Me.ImportForwarderHousebillToolStripMenuItem, Me.ImportPO39ToolStripMenuItem, Me.ToolStripMenuItem1, Me.ImportMaterialMastercsvToolStripMenuItem, Me.ImportTEUCMMFVolumeToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.UpdateCMMFFamilysq01F037FGPuToolStripMenuItem})
         Me.FinishGoodsToolStripMenuItem.Name = "FinishGoodsToolStripMenuItem"
-        Me.FinishGoodsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.FinishGoodsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.FinishGoodsToolStripMenuItem.Text = "Others"
         '
         'ImportWeeklyReportFGToolStripMenuItem
@@ -292,14 +294,14 @@ Partial Class FormMenu
         'DSVToolStripMenuItem
         '
         Me.DSVToolStripMenuItem.Name = "DSVToolStripMenuItem"
-        Me.DSVToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.DSVToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.DSVToolStripMenuItem.Tag = "FormImportDSV"
         Me.DSVToolStripMenuItem.Text = "DSV"
         '
         'PANALPINAToolStripMenuItem
         '
         Me.PANALPINAToolStripMenuItem.Name = "PANALPINAToolStripMenuItem"
-        Me.PANALPINAToolStripMenuItem.Size = New System.Drawing.Size(139, 22)
+        Me.PANALPINAToolStripMenuItem.Size = New System.Drawing.Size(138, 22)
         Me.PANALPINAToolStripMenuItem.Tag = "FormImportPanalpina"
         Me.PANALPINAToolStripMenuItem.Text = "PANALPINA"
         '
@@ -344,21 +346,21 @@ Partial Class FormMenu
         'OPLTToolStripMenuItem
         '
         Me.OPLTToolStripMenuItem.Name = "OPLTToolStripMenuItem"
-        Me.OPLTToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.OPLTToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.OPLTToolStripMenuItem.Tag = "FormImportOPLT3710"
         Me.OPLTToolStripMenuItem.Text = "OPLT 3710"
         '
         'OPLT720ToolStripMenuItem
         '
         Me.OPLT720ToolStripMenuItem.Name = "OPLT720ToolStripMenuItem"
-        Me.OPLT720ToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.OPLT720ToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.OPLT720ToolStripMenuItem.Tag = "FormImportOPLT3720"
         Me.OPLT720ToolStripMenuItem.Text = "OPLT 3720"
         '
         'ImportOPLTCommentsToolStripMenuItem
         '
         Me.ImportOPLTCommentsToolStripMenuItem.Name = "ImportOPLTCommentsToolStripMenuItem"
-        Me.ImportOPLTCommentsToolStripMenuItem.Size = New System.Drawing.Size(204, 22)
+        Me.ImportOPLTCommentsToolStripMenuItem.Size = New System.Drawing.Size(203, 22)
         Me.ImportOPLTCommentsToolStripMenuItem.Text = "Import OPLT Comments"
         '
         'UpdateCMMFFamilysq01F037FGPuToolStripMenuItem
@@ -372,7 +374,7 @@ Partial Class FormMenu
         '
         Me.ForecastToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForecastComponentsToolStripMenuItem})
         Me.ForecastToolStripMenuItem.Name = "ForecastToolStripMenuItem"
-        Me.ForecastToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
+        Me.ForecastToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
         Me.ForecastToolStripMenuItem.Text = "Forecast"
         '
         'ForecastComponentsToolStripMenuItem
@@ -495,7 +497,7 @@ Partial Class FormMenu
         '
         Me.ToolsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ChangeUserToolStripMenuItem, Me.ReadXmlToolStripMenuItem, Me.TurnoverHistoryConvertFamilySBUToolStripMenuItem})
         Me.ToolsToolStripMenuItem.Name = "ToolsToolStripMenuItem"
-        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(48, 20)
+        Me.ToolsToolStripMenuItem.Size = New System.Drawing.Size(47, 20)
         Me.ToolsToolStripMenuItem.Text = "Tools"
         '
         'ChangeUserToolStripMenuItem
@@ -527,7 +529,7 @@ Partial Class FormMenu
         '
         'AdminToolStripMenuItem
         '
-        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportVendorSSMToolStripMenuItem, Me.ImportSAOToolStripMenuItem, Me.ImportSPComponentsToolStripMenuItem, Me.ABCSupplierToolStripMenuItem, Me.ImportSPFGToolStripMenuItem, Me.AssignPOSASLShipdateToolStripMenuItem, Me.ImportVendorSISSAOToolStripMenuItem, Me.ConversionCustSASSEBAsiaToolStripMenuItem, Me.SPManagerToolStripMenuItem, Me.CommentMappingToolStripMenuItem, Me.CustomerFlowToolStripMenuItem})
+        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportVendorSSMToolStripMenuItem, Me.ImportSAOToolStripMenuItem, Me.ImportSPComponentsToolStripMenuItem, Me.ABCSupplierToolStripMenuItem, Me.ImportSPFGToolStripMenuItem, Me.AssignPOSASLShipdateToolStripMenuItem, Me.ImportVendorSISSAOToolStripMenuItem, Me.ConversionCustSASSEBAsiaToolStripMenuItem, Me.SPManagerToolStripMenuItem, Me.CommentMappingToolStripMenuItem, Me.CustomerFlowToolStripMenuItem, Me.MasterSBUToolStripMenuItem, Me.MasterActivityToolStripMenuItem})
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
         Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.AdminToolStripMenuItem.Text = "Admin"
@@ -608,6 +610,13 @@ Partial Class FormMenu
         Me.CustomerFlowToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
         Me.CustomerFlowToolStripMenuItem.Text = "Customer Flow"
         '
+        'MasterSBUToolStripMenuItem
+        '
+        Me.MasterSBUToolStripMenuItem.Name = "MasterSBUToolStripMenuItem"
+        Me.MasterSBUToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MasterSBUToolStripMenuItem.Tag = "FormSBU"
+        Me.MasterSBUToolStripMenuItem.Text = "Master SBU"
+        '
         'NotifyIcon1
         '
         Me.NotifyIcon1.Text = "NotifyIcon1"
@@ -623,6 +632,13 @@ Partial Class FormMenu
         Me.Label1.Size = New System.Drawing.Size(464, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Label1"
+        '
+        'MasterActivityToolStripMenuItem
+        '
+        Me.MasterActivityToolStripMenuItem.Name = "MasterActivityToolStripMenuItem"
+        Me.MasterActivityToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MasterActivityToolStripMenuItem.Tag = "FormActivity"
+        Me.MasterActivityToolStripMenuItem.Text = "Master Activity"
         '
         'FormMenu
         '
@@ -716,5 +732,7 @@ Partial Class FormMenu
     Friend WithEvents TurnoverReprotToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TurnoverCCToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents CMMFVolumeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MasterSBUToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MasterActivityToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

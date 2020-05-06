@@ -233,7 +233,7 @@ Public Class ImportWOR
                                     errSB.Append(String.Format("Bad Records: Rows {0}, Filename {1} {2}", count + 1, fi.FullName, vbCrLf))
                                 End If
                             Else
-                                If myrecord(15) = "Reception Date" Then
+                                If myrecord(15) = "Reception Date" Or myrecord(15) = "SPO Creation Date" Then
                                     myindex = 15 'Components
                                     myFileType = FileTypeEnum.CP
                                 Else
@@ -610,7 +610,8 @@ Public Class WOR
             End If
             If cxsebpodtl.ToString <> "" Then
                 myform.ProgressReport(2, String.Format("Copy PO Dtl"))
-                sqlstr = "copy cxsebpodtl(sebasiapono,polineno,shiptoparty,cmmf,fob,unittp,osqty,comments) from stdin with null as 'Null';"
+                'sqlstr = "copy cxsebpodtl(sebasiapono,polineno,shiptoparty,cmmf,fob,unittp,osqty,comments) from stdin with null as 'Null';"
+                sqlstr = "copy cxsebpodtl(sebasiapono,polineno,shiptoparty,cmmf,fob,unittp,osqty,comments,receptiondate) from stdin with null as 'Null';"
                 errMsg = DbAdapter1.copy(sqlstr, cxsebpodtl.ToString, myret)
                 'errMsg = cxsebpodtl.ToString
                 If Not myret Then
@@ -908,14 +909,23 @@ Public Class WOR
                     '                validReal(data(23)) & vbTab &
                     '                validint(data(39)) & vbTab &
                     '                validstr(comments) & vbCrLf)
+                    'cxsebpodtl.Append(po(0) & vbTab &
+                    '               po(1) & vbTab &
+                    '               data(1) & vbTab &
+                    '               data(11) & vbTab &
+                    '               validReal(data(22)) & vbTab &
+                    '               validReal(data(23)) & vbTab &
+                    '               validint(data(39)) & vbTab &
+                    '               validstr(data(46)) & vbCrLf)
                     cxsebpodtl.Append(po(0) & vbTab &
-                                   po(1) & vbTab &
-                                   data(1) & vbTab &
-                                   data(11) & vbTab &
-                                   validReal(data(22)) & vbTab &
-                                   validReal(data(23)) & vbTab &
-                                   validint(data(39)) & vbTab &
-                                   validstr(data(46)) & vbCrLf)
+                                  po(1) & vbTab &
+                                  data(1) & vbTab &
+                                  data(11) & vbTab &
+                                  validReal(data(22)) & vbTab &
+                                  validReal(data(23)) & vbTab &
+                                  validint(data(39)) & vbTab &
+                                  validstr(data(46)) & vbTab &
+                                    DateFormatyyyyMMddString(data(21)) & vbCrLf)
                 Else
                     podetailid = result.Item(0)
                 End If
@@ -1230,14 +1240,23 @@ Public Class WOR
                     '                validReal(data(17)) & vbTab &
                     '                validint(data(33)) & vbTab &
                     '                validstr(comments) & vbCrLf)
+                    'cxsebpodtl.Append(po(0) & vbTab &
+                    '               po(1) & vbTab &
+                    '               data(1) & vbTab &
+                    '               data(8) & vbTab &
+                    '               validReal(data(16)) & vbTab &
+                    '               validReal(data(17)) & vbTab &
+                    '               validint(data(33)) & vbTab &
+                    '               validstr(data(39)) & vbCrLf)
                     cxsebpodtl.Append(po(0) & vbTab &
-                                   po(1) & vbTab &
-                                   data(1) & vbTab &
-                                   data(8) & vbTab &
-                                   validReal(data(16)) & vbTab &
-                                   validReal(data(17)) & vbTab &
-                                   validint(data(33)) & vbTab &
-                                   validstr(data(39)) & vbCrLf)
+                                  po(1) & vbTab &
+                                  data(1) & vbTab &
+                                  data(8) & vbTab &
+                                  validReal(data(16)) & vbTab &
+                                  validReal(data(17)) & vbTab &
+                                  validint(data(33)) & vbTab &
+                                  validstr(data(39)) & vbTab &
+                                    DateFormatyyyyMMddString(data(15)) & vbCrLf)
                 Else
                     podetailid = result.Item(0)
                 End If

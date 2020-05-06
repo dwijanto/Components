@@ -134,7 +134,7 @@ Partial Class FormVendorBuSp
         Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(93, 22)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(92, 22)
         Me.ToolStripButton6.Text = "Import Text File"
         '
         'ToolStripButton7
@@ -143,7 +143,7 @@ Partial Class FormVendorBuSp
         Me.ToolStripButton7.Image = CType(resources.GetObject("ToolStripButton7.Image"), System.Drawing.Image)
         Me.ToolStripButton7.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton7.Name = "ToolStripButton7"
-        Me.ToolStripButton7.Size = New System.Drawing.Size(90, 22)
+        Me.ToolStripButton7.Size = New System.Drawing.Size(89, 22)
         Me.ToolStripButton7.Text = "Export To Excel"
         '
         'DataGridView1
@@ -153,7 +153,7 @@ Partial Class FormVendorBuSp
                     Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.ColumnHeadersHeight = 30
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.ColumnVendorCode, Me.Column2, Me.ColumnBUName, Me.ColumnSPName})
         Me.DataGridView1.Location = New System.Drawing.Point(0, 28)
         Me.DataGridView1.Name = "DataGridView1"

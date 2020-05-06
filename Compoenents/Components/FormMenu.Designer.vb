@@ -98,9 +98,13 @@ Partial Class FormMenu
         Me.CommentMappingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.CustomerFlowToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MasterSBUToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterActivityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMasterFamily = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterFamilyVendorSPSPMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterCMMFSPSPMToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MasterGroupSupplierToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.MasterActivityToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -529,7 +533,7 @@ Partial Class FormMenu
         '
         'AdminToolStripMenuItem
         '
-        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportVendorSSMToolStripMenuItem, Me.ImportSAOToolStripMenuItem, Me.ImportSPComponentsToolStripMenuItem, Me.ABCSupplierToolStripMenuItem, Me.ImportSPFGToolStripMenuItem, Me.AssignPOSASLShipdateToolStripMenuItem, Me.ImportVendorSISSAOToolStripMenuItem, Me.ConversionCustSASSEBAsiaToolStripMenuItem, Me.SPManagerToolStripMenuItem, Me.CommentMappingToolStripMenuItem, Me.CustomerFlowToolStripMenuItem, Me.MasterSBUToolStripMenuItem, Me.MasterActivityToolStripMenuItem})
+        Me.AdminToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportVendorSSMToolStripMenuItem, Me.ImportSAOToolStripMenuItem, Me.ImportSPComponentsToolStripMenuItem, Me.ABCSupplierToolStripMenuItem, Me.ImportSPFGToolStripMenuItem, Me.AssignPOSASLShipdateToolStripMenuItem, Me.ImportVendorSISSAOToolStripMenuItem, Me.ConversionCustSASSEBAsiaToolStripMenuItem, Me.SPManagerToolStripMenuItem, Me.CommentMappingToolStripMenuItem, Me.CustomerFlowToolStripMenuItem, Me.MasterSBUToolStripMenuItem, Me.MasterActivityToolStripMenuItem, Me.ToolStripMasterFamily, Me.MasterFamilyVendorSPSPMToolStripMenuItem, Me.MasterCMMFSPSPMToolStripMenuItem, Me.MasterGroupSupplierToolStripMenuItem})
         Me.AdminToolStripMenuItem.Name = "AdminToolStripMenuItem"
         Me.AdminToolStripMenuItem.Size = New System.Drawing.Size(55, 20)
         Me.AdminToolStripMenuItem.Text = "Admin"
@@ -617,6 +621,41 @@ Partial Class FormMenu
         Me.MasterSBUToolStripMenuItem.Tag = "FormSBU"
         Me.MasterSBUToolStripMenuItem.Text = "Master SBU"
         '
+        'MasterActivityToolStripMenuItem
+        '
+        Me.MasterActivityToolStripMenuItem.Name = "MasterActivityToolStripMenuItem"
+        Me.MasterActivityToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MasterActivityToolStripMenuItem.Tag = "FormActivity"
+        Me.MasterActivityToolStripMenuItem.Text = "Master Activity"
+        '
+        'ToolStripMasterFamily
+        '
+        Me.ToolStripMasterFamily.Name = "ToolStripMasterFamily"
+        Me.ToolStripMasterFamily.Size = New System.Drawing.Size(231, 22)
+        Me.ToolStripMasterFamily.Tag = "FormFamily"
+        Me.ToolStripMasterFamily.Text = "Master Family"
+        '
+        'MasterFamilyVendorSPSPMToolStripMenuItem
+        '
+        Me.MasterFamilyVendorSPSPMToolStripMenuItem.Name = "MasterFamilyVendorSPSPMToolStripMenuItem"
+        Me.MasterFamilyVendorSPSPMToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MasterFamilyVendorSPSPMToolStripMenuItem.Tag = "FormVendorFamilySPSPM"
+        Me.MasterFamilyVendorSPSPMToolStripMenuItem.Text = "Master Family Vendor SP SPM"
+        '
+        'MasterCMMFSPSPMToolStripMenuItem
+        '
+        Me.MasterCMMFSPSPMToolStripMenuItem.Name = "MasterCMMFSPSPMToolStripMenuItem"
+        Me.MasterCMMFSPSPMToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MasterCMMFSPSPMToolStripMenuItem.Tag = "FormCMMFSPSPM"
+        Me.MasterCMMFSPSPMToolStripMenuItem.Text = "Master CMMF SP SPM"
+        '
+        'MasterGroupSupplierToolStripMenuItem
+        '
+        Me.MasterGroupSupplierToolStripMenuItem.Name = "MasterGroupSupplierToolStripMenuItem"
+        Me.MasterGroupSupplierToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
+        Me.MasterGroupSupplierToolStripMenuItem.Tag = "FormMasterGroupSupplier"
+        Me.MasterGroupSupplierToolStripMenuItem.Text = "Master Group Supplier"
+        '
         'NotifyIcon1
         '
         Me.NotifyIcon1.Text = "NotifyIcon1"
@@ -632,13 +671,6 @@ Partial Class FormMenu
         Me.Label1.Size = New System.Drawing.Size(464, 23)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Label1"
-        '
-        'MasterActivityToolStripMenuItem
-        '
-        Me.MasterActivityToolStripMenuItem.Name = "MasterActivityToolStripMenuItem"
-        Me.MasterActivityToolStripMenuItem.Size = New System.Drawing.Size(231, 22)
-        Me.MasterActivityToolStripMenuItem.Tag = "FormActivity"
-        Me.MasterActivityToolStripMenuItem.Text = "Master Activity"
         '
         'FormMenu
         '
@@ -734,5 +766,9 @@ Partial Class FormMenu
     Friend WithEvents CMMFVolumeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterSBUToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterActivityToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMasterFamily As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MasterFamilyVendorSPSPMToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MasterCMMFSPSPMToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents MasterGroupSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

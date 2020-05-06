@@ -69,6 +69,10 @@ Public Class FormMenu
         AddHandler CMMFVolumeToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler MasterSBUToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler MasterActivityToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler ToolStripMasterFamily.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler MasterFamilyVendorSPSPMToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler MasterCMMFSPSPMToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler MasterGroupSupplierToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
     End Sub
     Private Sub FormMenu_Load(ByVal sender As Object, ByVal e As System.EventArgs)
         Try
@@ -292,6 +296,23 @@ Public Class FormMenu
     End Sub
 
     Private Sub MasterActivityToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterActivityToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub ToolStripMenuItem4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripMasterFamily.Click
+
+    End Sub
+
+
+    Private Sub MasterFamilyVendorSPSPMToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterFamilyVendorSPSPMToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub MasterCMMFSPSPMToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterCMMFSPSPMToolStripMenuItem.Click
+
+    End Sub
+
+    Private Sub MasterGroupSupplierToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterGroupSupplierToolStripMenuItem.Click
 
     End Sub
 End Class

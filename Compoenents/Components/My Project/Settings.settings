@@ -33,7 +33,7 @@
       <Value Profile="(Default)">host=hon14nt;port=5432;database=LogisticDb;CommandTimeOut=1000;TimeOut=1000;</Value>
     </Setting>
     <Setting Name="conTest6" Type="System.String" Scope="User">
-      <Value Profile="(Default)">host=localhost;port=5433;database=LogisticDb2013;CommandTimeOut=1000;TimeOut=1000;</Value>
+      <Value Profile="(Default)">host=localhost;port=5433;database=LogisticDb20200406;CommandTimeOut=1000;TimeOut=1000;</Value>
     </Setting>
     <Setting Name="oExConDev1" Type="System.String" Scope="User">
       <Value Profile="(Default)">ODBC;DSN=PostgreSQL30Unicode;</Value>
@@ -49,7 +49,7 @@
       <Value Profile="(Default)">host=hon14nt;port=5432;database=LogisticDb;CommandTimeOut=1000;TimeOut=1000;</Value>
     </Setting>
     <Setting Name="conLocal" Type="System.String" Scope="User">
-      <Value Profile="(Default)">host=localhost;port=5433;database=LogisticDb20190909;CommandTimeOut=1000;TimeOut=1000;</Value>
+      <Value Profile="(Default)">host=localhost;port=5433;database=LogisticDb20200406;CommandTimeOut=1000;TimeOut=1000;</Value>
     </Setting>
   </Settings>
 </SettingsFile>

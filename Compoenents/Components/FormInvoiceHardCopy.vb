@@ -828,6 +828,7 @@ Public Class FormInvoiceHardCopy
         docreceiveloaddata(TextBox4.Text)
         'TextBox4.Text = ""
     End Sub
+
     Private Sub TextBox3_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox3.KeyUp, TextBox4.KeyUp, TextBox5.KeyUp, TextBox6.KeyUp, DateTimePicker2.KeyUp, TextBox8.KeyUp, TextBox15.KeyUp, TextBox16.KeyUp, TextBox12.KeyUp, TextBox13.KeyUp, TextBox14.KeyUp
         'TextBox3.Text = TextBox3.Text.ToUpper
         'TextBox3.Select(TextBox3.Text.Length, 0)
@@ -879,7 +880,7 @@ Public Class FormInvoiceHardCopy
                                  " where housebill = '" & TextBox8.Text.Replace("'", "''") & "' limit 1"
 
                         sqlstr = "select c.customername::character varying from packinglisthd phd" &
-                                 " left join packinglistdt pldt on pldt.delivery = phd.delivery" &                                 
+                                 " left join packinglistdt pldt on pldt.delivery = phd.delivery" &
                                  " left join cxsebpodtl pdt on pdt.sebasiapono = pldt.pohd and pdt.polineno = pldt.poitem" &
                                  " left join cxrelsalesdocpo r on r.cxsebpodtlid = pdt.cxsebpodtlid" &
                                  " left join cxsalesorderdtl sdt on sdt.cxsalesorderdtlid = r.cxsalesorderdtlid" &

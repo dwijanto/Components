@@ -186,7 +186,7 @@ Public Class FormGetEmailFromExServerCP
         Using myservice As New ClassEWS(url, username, password, "as", False)
             service = myservice.CreateConnection()
             Dim searchFilterCollection As New List(Of SearchFilter)
-            searchFilterCollection.Add(New SearchFilter.IsGreaterThan(ItemSchema.DateTimeReceived, DateTime.Parse(mylastdate.ToString)))
+            searchFilterCollection.Add(New SearchFilter.IsGreaterThan(ItemSchema.DateTimeReceived, DateTime.Parse(mylastdate.ToString)))            
             Dim searchFilter As SearchFilter = New SearchFilter.SearchFilterCollection(LogicalOperator.And, searchFilterCollection.ToArray)
             Dim view As New ItemView(totalview)
             view.PropertySet = New PropertySet(BasePropertySet.IdOnly, ItemSchema.Subject, ItemSchema.DateTimeReceived)
@@ -246,6 +246,7 @@ Public Class FormGetEmailFromExServerCP
                             Dim pkey1(0) As Object
                             'Replace any character contains ' (singlequote)
                             Dim mydocemailname = DbAdapter1.validfilename(myarray(myarray.Count - 1).Trim).Replace("'", "''")
+
                             If mydocemailname.Length = 0 Then
                                 mydocemailname = "-BLANK-"
                             End If

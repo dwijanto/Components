@@ -1069,6 +1069,24 @@ Public Class DbAdapter
 
         End Using
     End Sub
+
+    Function deleteWOR(ByRef message As String) As Boolean
+        Dim myret As Boolean = False
+        Using conn As New NpgsqlConnection(Connectionstring)
+            Try
+                conn.Open()
+                Dim cmd As NpgsqlCommand = New NpgsqlCommand("deletewor", conn)
+                cmd.CommandType = CommandType.StoredProcedure
+
+                cmd.ExecuteScalar()
+                myret = True
+            Catch ex As Exception
+                message = ex.Message
+            End Try
+        End Using
+        Return myret
+    End Function
+
     'Sub deleteWOR(ByVal mydate As Date)
     '    Using conn As New NpgsqlConnection(Connectionstring)
     '        Try

@@ -137,12 +137,16 @@
     <Compile Include="Class\ModelAdapter.vb" />
     <Compile Include="Class\RTurnoverExtendYearCur.vb" />
     <Compile Include="Controller\ActivityController.vb" />
+    <Compile Include="Controller\CMMFSPSPMController.vb" />
     <Compile Include="Controller\CMMFVolumeController.vb" />
+    <Compile Include="Controller\FamilyController.vb" />
+    <Compile Include="Controller\GroupSupplierController.vb" />
     <Compile Include="Controller\OPLTCOMMENTController.vb" />
     <Compile Include="Controller\OPLTCOMMENTTXController.vb" />
     <Compile Include="Controller\SBUController.vb" />
     <Compile Include="Controller\TEUCPController.vb" />
     <Compile Include="Controller\TEUFGController.vb" />
+    <Compile Include="Controller\VendorFamilySPSPMController.vb" />
     <Compile Include="DbAdapter.vb" />
     <Compile Include="DialogActivity.Designer.vb">
       <DependentUpon>DialogActivity.vb</DependentUpon>
@@ -168,10 +172,22 @@
     <Compile Include="DialogAddManagementMessage.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DialogFamily.Designer.vb">
+      <DependentUpon>DialogFamily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogFamily.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DialogSAOAllocationInput.Designer.vb">
       <DependentUpon>DialogSAOAllocationInput.vb</DependentUpon>
     </Compile>
     <Compile Include="DialogSAOAllocationInput.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogVendorFamilySPSPM.Designer.vb">
+      <DependentUpon>DialogVendorFamilySPSPM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogVendorFamilySPSPM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="ExportToExcelFile.vb" />
@@ -246,6 +262,12 @@
       <DependentUpon>FormCMMFMissingLoadingCode.vb</DependentUpon>
     </Compile>
     <Compile Include="FormCMMFMissingLoadingCode.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormCMMFSPSPM.Designer.vb">
+      <DependentUpon>FormCMMFSPSPM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormCMMFSPSPM.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormCMMFVolume.Designer.vb">
@@ -330,6 +352,12 @@
       <DependentUpon>FormEmailPreparationCP2.vb</DependentUpon>
     </Compile>
     <Compile Include="FormEmailPreparationCP2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormFamily.Designer.vb">
+      <DependentUpon>FormFamily.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormFamily.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormGenerateChart.Designer.vb">
@@ -566,6 +594,12 @@
     <Compile Include="FormMarketContacts.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormMasterGroupSupplier.Designer.vb">
+      <DependentUpon>FormMasterGroupSupplier.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormMasterGroupSupplier.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormModifyTrackingNo.Designer.vb">
       <DependentUpon>FormModifyTrackingNo.vb</DependentUpon>
     </Compile>
@@ -758,6 +792,12 @@
     <Compile Include="FormVendorBuSp.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormVendorFamilySPSPM.Designer.vb">
+      <DependentUpon>FormVendorFamilySPSPM.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormVendorFamilySPSPM.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormVendorSP1.Designer.vb">
       <DependentUpon>FormVendorSP1.vb</DependentUpon>
     </Compile>
@@ -828,10 +868,14 @@
     </Compile>
     <Compile Include="Logger.vb" />
     <Compile Include="Model\ActivityModel.vb" />
+    <Compile Include="Model\CMMFSPSPMModel.vb" />
     <Compile Include="Model\CMMFVolumeModel.vb" />
+    <Compile Include="Model\FamilyModel.vb" />
+    <Compile Include="Model\GroupSupplierModel.vb" />
     <Compile Include="Model\OPLTCOMMENTModel.vb" />
     <Compile Include="Model\OPLTCOMMENTTXModel.vb" />
     <Compile Include="Model\SBUModel.vb" />
+    <Compile Include="Model\VendorFamilySPSPMModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -893,8 +937,14 @@
     <EmbeddedResource Include="DialogAddManagementMessage.resx">
       <DependentUpon>DialogAddManagementMessage.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="DialogFamily.resx">
+      <DependentUpon>DialogFamily.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="DialogSAOAllocationInput.resx">
       <DependentUpon>DialogSAOAllocationInput.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogVendorFamilySPSPM.resx">
+      <DependentUpon>DialogVendorFamilySPSPM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormABCSupplier.resx">
       <DependentUpon>FormABCSupplier.vb</DependentUpon>
@@ -928,6 +978,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormCMMFMissingLoadingCode.resx">
       <DependentUpon>FormCMMFMissingLoadingCode.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormCMMFSPSPM.resx">
+      <DependentUpon>FormCMMFSPSPM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormCMMFVolume.resx">
       <DependentUpon>FormCMMFVolume.vb</DependentUpon>
@@ -970,6 +1023,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormEmailPreparationCP2.resx">
       <DependentUpon>FormEmailPreparationCP2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormFamily.resx">
+      <DependentUpon>FormFamily.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormGenerateChart.resx">
       <DependentUpon>FormGenerateChart.vb</DependentUpon>
@@ -1088,6 +1144,9 @@
     <EmbeddedResource Include="FormMarketContacts.resx">
       <DependentUpon>FormMarketContacts.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMasterGroupSupplier.resx">
+      <DependentUpon>FormMasterGroupSupplier.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormModifyTrackingNo.resx">
       <DependentUpon>FormModifyTrackingNo.vb</DependentUpon>
     </EmbeddedResource>
@@ -1183,6 +1242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormVendorBuSp.resx">
       <DependentUpon>FormVendorBuSp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendorFamilySPSPM.resx">
+      <DependentUpon>FormVendorFamilySPSPM.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormVendorSP1.resx">
       <DependentUpon>FormVendorSP1.vb</DependentUpon>

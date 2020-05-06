@@ -480,3 +480,9 @@ C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\bin\Release\Mon
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormSBU.resources
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.DialogActivity.resources
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormActivity.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.DialogFamily.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormFamily.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.DialogVendorFamilySPSPM.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormVendorFamilySPSPM.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormCMMFSPSPM.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormMasterGroupSupplier.resources

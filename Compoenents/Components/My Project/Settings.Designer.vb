@@ -177,8 +177,8 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("host=localhost;port=5433;database=LogisticDb2013;CommandTimeOut=1000;TimeOut=1000"& _ 
-            ";")>  _
+         Global.System.Configuration.DefaultSettingValueAttribute("host=localhost;port=5433;database=LogisticDb20200406;CommandTimeOut=1000;TimeOut="& _ 
+            "1000;")>  _
         Public Property conTest6() As String
             Get
                 Return CType(Me("conTest6"),String)
@@ -224,7 +224,7 @@ Namespace My
         
         <Global.System.Configuration.UserScopedSettingAttribute(),  _
          Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.DefaultSettingValueAttribute("host=localhost;port=5433;database=LogisticDb20190909;CommandTimeOut=1000;TimeOut="& _ 
+         Global.System.Configuration.DefaultSettingValueAttribute("host=localhost;port=5433;database=LogisticDb20200406;CommandTimeOut=1000;TimeOut="& _ 
             "1000;")>  _
         Public Property conLocal() As String
             Get

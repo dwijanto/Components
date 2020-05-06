@@ -53,7 +53,7 @@ Public Class TEUCPController
             If Not IsDBNull(drv.Row.Item("loadingcode")) Then
                 loadingcode = drv.Row.Item("loadingcode")
             Else
-                MessageBox.Show(String.Format("Loading code is null for this cmmf : {0}", drv.Row.Item("cmmf")))
+                'MessageBox.Show(String.Format("Loading code is null for this cmmf : {0}", drv.Row.Item("cmmf")))
             End If
             Dim mycmmf As Long = 0
             If Not IsDBNull(drv.Row.Item("cmmf")) Then

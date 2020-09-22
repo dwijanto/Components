@@ -1222,6 +1222,25 @@ Public Class DbAdapter
 
         End Using
     End Sub
+    Public Function ExecuteStoreProcedure(ByVal storeprocedurename As String, ByRef result As Object, Optional ByVal Parameters As NpgsqlParameter() = Nothing) As Boolean
+        Dim myret As Boolean = False
+        Using conn As New NpgsqlConnection(Connectionstring)
+            Try
+                conn.Open()
+                Dim cmd As NpgsqlCommand = New NpgsqlCommand(storeprocedurename, conn)
+                cmd.CommandType = CommandType.StoredProcedure
+                If Not IsNothing(Parameters) Then
+                    cmd.Parameters.AddRange(Parameters)
+                End If
+
+                result = cmd.ExecuteScalar()
+                myret = True
+            Catch ex As Exception
+
+            End Try
+        End Using
+        Return myret
+    End Function
 
     Public Function getproglock(ByVal programname As String, ByVal userid As String, ByVal status As Integer) As Boolean
         Dim result As Object

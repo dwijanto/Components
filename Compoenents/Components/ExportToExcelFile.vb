@@ -81,6 +81,7 @@ Public Class ExportToExcelFile
         Me.PivotCallback = PivotCallback
         Me.mytemplate = template
     End Sub
+
     Public Sub New(ByRef parent)
         Me.Parent = parent
     End Sub

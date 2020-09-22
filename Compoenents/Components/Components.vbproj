@@ -135,6 +135,7 @@
     <Compile Include="Class\IToolbarAction.vb" />
     <Compile Include="Class\ManagementMessageAdapter.vb" />
     <Compile Include="Class\ModelAdapter.vb" />
+    <Compile Include="Class\DoBackground.vb" />
     <Compile Include="Class\RTurnoverExtendYearCur.vb" />
     <Compile Include="Controller\ActivityController.vb" />
     <Compile Include="Controller\CMMFSPSPMController.vb" />
@@ -144,6 +145,7 @@
     <Compile Include="Controller\OPLTCOMMENTController.vb" />
     <Compile Include="Controller\OPLTCOMMENTTXController.vb" />
     <Compile Include="Controller\SBUController.vb" />
+    <Compile Include="Controller\ScoreboardController.vb" />
     <Compile Include="Controller\TEUCPController.vb" />
     <Compile Include="Controller\TEUFGController.vb" />
     <Compile Include="Controller\VendorFamilySPSPMController.vb" />
@@ -170,6 +172,12 @@
       <DependentUpon>DialogAddManagementMessage.vb</DependentUpon>
     </Compile>
     <Compile Include="DialogAddManagementMessage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DialogDateRange.Designer.vb">
+      <DependentUpon>DialogDateRange.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DialogDateRange.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="DialogFamily.Designer.vb">
@@ -702,6 +710,12 @@
     <Compile Include="FormSBU.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="FormScoreboardNet.Designer.vb">
+      <DependentUpon>FormScoreboardNet.vb</DependentUpon>
+    </Compile>
+    <Compile Include="FormScoreboardNet.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="FormSearchDocument.Designer.vb">
       <DependentUpon>FormSearchDocument.vb</DependentUpon>
     </Compile>
@@ -875,6 +889,7 @@
     <Compile Include="Model\OPLTCOMMENTModel.vb" />
     <Compile Include="Model\OPLTCOMMENTTXModel.vb" />
     <Compile Include="Model\SBUModel.vb" />
+    <Compile Include="Model\ScoreboardModel.vb" />
     <Compile Include="Model\VendorFamilySPSPMModel.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
@@ -936,6 +951,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DialogAddManagementMessage.resx">
       <DependentUpon>DialogAddManagementMessage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DialogDateRange.resx">
+      <DependentUpon>DialogDateRange.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DialogFamily.resx">
       <DependentUpon>DialogFamily.vb</DependentUpon>
@@ -1197,6 +1215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormSBU.resx">
       <DependentUpon>FormSBU.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormScoreboardNet.resx">
+      <DependentUpon>FormScoreboardNet.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormSearchDocument.resx">
       <DependentUpon>FormSearchDocument.vb</DependentUpon>

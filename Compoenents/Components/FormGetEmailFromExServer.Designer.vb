@@ -47,7 +47,7 @@ Partial Class FormGetEmailFromExServer
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(415, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(446, 17)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -58,7 +58,7 @@ Partial Class FormGetEmailFromExServer
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(211, 49)
+        Me.Button1.Location = New System.Drawing.Point(212, 40)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(108, 38)
         Me.Button1.TabIndex = 62

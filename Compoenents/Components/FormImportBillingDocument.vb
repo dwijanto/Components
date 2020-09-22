@@ -173,7 +173,8 @@ Public Class FormImportBillingDocument
                                                    validstr(myrecord(17)) & vbTab &
                                                    dateformatdotyyyymmdd(myrecord(3)) & vbTab &
                                                    validlong(myrecord(18)) & vbTab &
-                                                   validlong(myrecord(19)) & vbCrLf)
+                                                   validlong(myrecord(19)) & vbTab &
+                                                    validlong(myrecord(43)) & vbCrLf)
 
                             End If
                             'billingdocument bigint,item integer,billedqty numeric, salesunit text, requiredqty numeric,
@@ -242,7 +243,7 @@ Public Class FormImportBillingDocument
             If BillingHDSB.Length > 0 Then
                 ProgressReport(2, "Copy BillingHD")
 
-                sqlstr = "copy billinghd( billingdocument,billingtype,salesorg,pricingprocedure,billingdate,incoterm,incoterm2,termofpayment,destcountry,companycode,netvalue,crcy,officer,createdon,payer,soldtoparty) from stdin with null as 'Null';"
+                sqlstr = "copy billinghd( billingdocument,billingtype,salesorg,pricingprocedure,billingdate,incoterm,incoterm2,termofpayment,destcountry,companycode,netvalue,crcy,officer,createdon,payer,soldtoparty,reversedoc) from stdin with null as 'Null';"
                 Dim errmessage As String = String.Empty
                 Dim myret As Boolean = False
                 errmessage = DbAdapter1.copy(sqlstr, BillingHDSB.ToString, myret)

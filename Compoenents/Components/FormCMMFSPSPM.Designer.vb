@@ -34,14 +34,15 @@ Partial Class FormCMMFSPSPM
         Me.ToolStripTextBox1 = New System.Windows.Forms.ToolStripTextBox()
         Me.ToolStripButton7 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripButton6 = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripButton8 = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
-        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
-        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
         Me.ToolStrip1.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.TopToolStripPanel.SuspendLayout()
@@ -53,10 +54,10 @@ Partial Class FormCMMFSPSPM
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripTextBox1, Me.ToolStripButton7, Me.ToolStripButton6})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripTextBox1, Me.ToolStripButton7, Me.ToolStripButton6, Me.ToolStripButton8})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(434, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(521, 25)
         Me.ToolStrip1.TabIndex = 16
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -143,6 +144,15 @@ Partial Class FormCMMFSPSPM
         Me.ToolStripButton6.Size = New System.Drawing.Size(89, 22)
         Me.ToolStripButton6.Text = "Export To Excel"
         '
+        'ToolStripButton8
+        '
+        Me.ToolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text
+        Me.ToolStripButton8.Image = CType(resources.GetObject("ToolStripButton8.Image"), System.Drawing.Image)
+        Me.ToolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.ToolStripButton8.Name = "ToolStripButton8"
+        Me.ToolStripButton8.Size = New System.Drawing.Size(87, 22)
+        Me.ToolStripButton8.Text = "Blank SP Code"
+        '
         'ToolStripContainer1
         '
         '
@@ -174,6 +184,24 @@ Partial Class FormCMMFSPSPM
         Me.DataGridView1.Size = New System.Drawing.Size(723, 417)
         Me.DataGridView1.TabIndex = 0
         '
+        'Column1
+        '
+        Me.Column1.DataPropertyName = "cmmf"
+        Me.Column1.HeaderText = "CMMF"
+        Me.Column1.Name = "Column1"
+        '
+        'Column2
+        '
+        Me.Column2.DataPropertyName = "sp"
+        Me.Column2.HeaderText = "SP"
+        Me.Column2.Name = "Column2"
+        '
+        'Column3
+        '
+        Me.Column3.DataPropertyName = "spm"
+        Me.Column3.HeaderText = "SPM"
+        Me.Column3.Name = "Column3"
+        '
         'StatusStrip1
         '
         Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripStatusLabel1, Me.ToolStripProgressBar1})
@@ -195,24 +223,6 @@ Partial Class FormCMMFSPSPM
         '
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
-        '
-        'Column1
-        '
-        Me.Column1.DataPropertyName = "cmmf"
-        Me.Column1.HeaderText = "CMMF"
-        Me.Column1.Name = "Column1"
-        '
-        'Column2
-        '
-        Me.Column2.DataPropertyName = "sp"
-        Me.Column2.HeaderText = "SP"
-        Me.Column2.Name = "Column2"
-        '
-        'Column3
-        '
-        Me.Column3.DataPropertyName = "spm"
-        Me.Column3.HeaderText = "SPM"
-        Me.Column3.Name = "Column3"
         '
         'FormCMMFSPSPM
         '
@@ -256,4 +266,5 @@ Partial Class FormCMMFSPSPM
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
     Friend WithEvents ToolStripStatusLabel1 As System.Windows.Forms.ToolStripStatusLabel
     Friend WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
+    Friend WithEvents ToolStripButton8 As System.Windows.Forms.ToolStripButton
 End Class

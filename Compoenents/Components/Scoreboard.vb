@@ -313,7 +313,12 @@ Public Class Scoreboard
     Private Sub ProgressReport(ByVal id As Integer, ByRef message As String)
         If Me.CheckedListBox1.InvokeRequired Then
             Dim d As New ProgressReportDelegate(AddressOf ProgressReport)
-            Me.Invoke(d, New Object() {id, message})
+            Try
+                Me.Invoke(d, New Object() {id, message})
+            Catch ex As Exception
+
+            End Try
+
         Else
             Select Case id
                 Case 2

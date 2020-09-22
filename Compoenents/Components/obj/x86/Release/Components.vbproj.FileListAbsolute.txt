@@ -486,3 +486,5 @@ C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormVendorFamilySPSPM.resources
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormCMMFSPSPM.resources
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormMasterGroupSupplier.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.FormScoreboardNet.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Release\Components.DialogDateRange.resources

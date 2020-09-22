@@ -43,6 +43,7 @@ Partial Class FormWORAllLines
         Me.Button2 = New System.Windows.Forms.Button()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         Me.Label3 = New System.Windows.Forms.Label()
+        Me.RadioButton5 = New System.Windows.Forms.RadioButton()
         Me.StatusStrip1.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
@@ -169,6 +170,7 @@ Partial Class FormWORAllLines
         '
         Me.GroupBox2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox2.Controls.Add(Me.RadioButton5)
         Me.GroupBox2.Controls.Add(Me.RadioButton3)
         Me.GroupBox2.Controls.Add(Me.RadioButton4)
         Me.GroupBox2.Location = New System.Drawing.Point(12, 71)
@@ -204,7 +206,7 @@ Partial Class FormWORAllLines
         'CheckBox1
         '
         Me.CheckBox1.AutoSize = True
-        Me.CheckBox1.Location = New System.Drawing.Point(37, 139)
+        Me.CheckBox1.Location = New System.Drawing.Point(37, 130)
         Me.CheckBox1.Name = "CheckBox1"
         Me.CheckBox1.Size = New System.Drawing.Size(137, 17)
         Me.CheckBox1.TabIndex = 48
@@ -214,16 +216,15 @@ Partial Class FormWORAllLines
         'TextBox1
         '
         Me.TextBox1.BackColor = System.Drawing.SystemColors.ButtonHighlight
-        Me.TextBox1.Location = New System.Drawing.Point(37, 162)
+        Me.TextBox1.Location = New System.Drawing.Point(37, 153)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.ReadOnly = True
         Me.TextBox1.Size = New System.Drawing.Size(248, 20)
         Me.TextBox1.TabIndex = 49
         Me.TextBox1.Visible = False
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(291, 160)
+        Me.Button2.Location = New System.Drawing.Point(291, 151)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(61, 23)
         Me.Button2.TabIndex = 50
@@ -239,6 +240,17 @@ Partial Class FormWORAllLines
         Me.Label3.Size = New System.Drawing.Size(39, 13)
         Me.Label3.TabIndex = 51
         Me.Label3.Text = "Label3"
+        '
+        'RadioButton5
+        '
+        Me.RadioButton5.AutoSize = True
+        Me.RadioButton5.Location = New System.Drawing.Point(290, 19)
+        Me.RadioButton5.Name = "RadioButton5"
+        Me.RadioButton5.Size = New System.Drawing.Size(110, 17)
+        Me.RadioButton5.TabIndex = 49
+        Me.RadioButton5.TabStop = True
+        Me.RadioButton5.Text = "Spare Parts (Only)"
+        Me.RadioButton5.UseVisualStyleBackColor = True
         '
         'FormWORAllLines
         '
@@ -287,4 +299,5 @@ Partial Class FormWORAllLines
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
     Public WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
     Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents RadioButton5 As System.Windows.Forms.RadioButton
 End Class

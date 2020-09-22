@@ -66,6 +66,8 @@ Partial Class FormMenu
         Me.ForecastComponentsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ReportsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ScoreBoardReportToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ScoreboardCPToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ScoreboardNewToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.SASLSSLToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.IPLTToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.KPIToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -184,7 +186,7 @@ Partial Class FormMenu
         '
         Me.ComponentsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportWeeklyReportComponentsToolStripMenuItem, Me.ImportIPLTComponentsToolStripMenuItem, Me.ImportOPLTComponentsToolStripMenuItem, Me.ImportDeliveryPostingToolStripMenuItem})
         Me.ComponentsToolStripMenuItem.Name = "ComponentsToolStripMenuItem"
-        Me.ComponentsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.ComponentsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ComponentsToolStripMenuItem.Text = "WOR"
         '
         'ImportWeeklyReportComponentsToolStripMenuItem
@@ -222,7 +224,7 @@ Partial Class FormMenu
         '
         Me.FinishGoodsToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ImportWeeklyReportFGToolStripMenuItem, Me.ImportEKKOToolStripMenuItem, Me.ImportConfirmationShipmentToolStripMenuItem, Me.ImportOPLTZZA013ToolStripMenuItem, Me.ImportMiroToolStripMenuItem, Me.ToolStripSeparator1, Me.ImportAccountingHeadersq01ToolStripMenuItem, Me.ImportPackingListToolStripMenuItem, Me.ImportBillingDocumentToolStripMenuItem, Me.ImportForwarderHousebillToolStripMenuItem, Me.ImportPO39ToolStripMenuItem, Me.ToolStripMenuItem1, Me.ImportMaterialMastercsvToolStripMenuItem, Me.ImportTEUCMMFVolumeToolStripMenuItem, Me.ToolStripMenuItem2, Me.ToolStripMenuItem3, Me.UpdateCMMFFamilysq01F037FGPuToolStripMenuItem})
         Me.FinishGoodsToolStripMenuItem.Name = "FinishGoodsToolStripMenuItem"
-        Me.FinishGoodsToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.FinishGoodsToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.FinishGoodsToolStripMenuItem.Text = "Others"
         '
         'ImportWeeklyReportFGToolStripMenuItem
@@ -378,7 +380,7 @@ Partial Class FormMenu
         '
         Me.ForecastToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ForecastComponentsToolStripMenuItem})
         Me.ForecastToolStripMenuItem.Name = "ForecastToolStripMenuItem"
-        Me.ForecastToolStripMenuItem.Size = New System.Drawing.Size(118, 22)
+        Me.ForecastToolStripMenuItem.Size = New System.Drawing.Size(152, 22)
         Me.ForecastToolStripMenuItem.Text = "Forecast"
         '
         'ForecastComponentsToolStripMenuItem
@@ -398,10 +400,26 @@ Partial Class FormMenu
         '
         'ScoreBoardReportToolStripMenuItem
         '
+        Me.ScoreBoardReportToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ScoreboardCPToolStripMenuItem, Me.ScoreboardNewToolStripMenuItem})
         Me.ScoreBoardReportToolStripMenuItem.Name = "ScoreBoardReportToolStripMenuItem"
         Me.ScoreBoardReportToolStripMenuItem.Size = New System.Drawing.Size(228, 22)
-        Me.ScoreBoardReportToolStripMenuItem.Tag = "Scoreboard"
+        Me.ScoreBoardReportToolStripMenuItem.Tag = ""
         Me.ScoreBoardReportToolStripMenuItem.Text = "Scoreboard"
+        '
+        'ScoreboardCPToolStripMenuItem
+        '
+        Me.ScoreboardCPToolStripMenuItem.Name = "ScoreboardCPToolStripMenuItem"
+        Me.ScoreboardCPToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.ScoreboardCPToolStripMenuItem.Tag = "Scoreboard"
+        Me.ScoreboardCPToolStripMenuItem.Text = "Scoreboard CP"
+        Me.ScoreboardCPToolStripMenuItem.Visible = False
+        '
+        'ScoreboardNewToolStripMenuItem
+        '
+        Me.ScoreboardNewToolStripMenuItem.Name = "ScoreboardNewToolStripMenuItem"
+        Me.ScoreboardNewToolStripMenuItem.Size = New System.Drawing.Size(156, 22)
+        Me.ScoreboardNewToolStripMenuItem.Tag = "FormScoreboardNet"
+        Me.ScoreboardNewToolStripMenuItem.Text = "Scoreboard Net"
         '
         'SASLSSLToolStripMenuItem
         '
@@ -770,5 +788,7 @@ Partial Class FormMenu
     Friend WithEvents MasterFamilyVendorSPSPMToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterCMMFSPSPMToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents MasterGroupSupplierToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ScoreboardCPToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ScoreboardNewToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 
 End Class

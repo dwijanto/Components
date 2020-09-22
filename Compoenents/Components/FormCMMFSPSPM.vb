@@ -71,58 +71,58 @@ Public Class FormCMMFSPSPM
         End If
     End Sub
 
-    Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
-        Dim drv As DataRowView = myController.BS.AddNew()
-        drv.row.item("pcmmf") = False
-        drv.row.item("sp") = False
-        drv.row.item("lg") = False
-        drv.row.item("bu") = False
-        drv.row.item("cp") = False
-        drv.row.item("act") = False
-        drv.EndEdit()
-    End Sub
+    'Private Sub ToolStripButton1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton1.Click
+    '    Dim drv As DataRowView = myController.BS.AddNew()
+    '    drv.row.item("pcmmf") = False
+    '    drv.row.item("sp") = False
+    '    drv.row.item("lg") = False
+    '    drv.row.item("bu") = False
+    '    drv.row.item("cp") = False
+    '    drv.row.item("act") = False
+    '    drv.EndEdit()
+    'End Sub
 
     Private Sub ToolStripButton5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton5.Click
         Me.loadData()
     End Sub
 
-    Private Sub ToolStripButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton4.Click
-        If Me.Validate() Then
-            If myController.Validate Then
-                myController.save()
-            End If
+    'Private Sub ToolStripButton4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton4.Click
+    '    If Me.Validate() Then
+    '        If myController.Validate Then
+    '            myController.save()
+    '        End If
 
-        End If
+    '    End If
 
-    End Sub
+    'End Sub
 
     'Public Overloads Function validate() As Boolean
     '    Dim drv As DataRowView = myController.BS.Current
 
     'End Function
 
-    Private Sub ToolStripButton3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton3.Click
-        If Not IsNothing(myController.BS.Current) Then
-            If MessageBox.Show("Delete selected Record(s)?", "Question", System.Windows.Forms.MessageBoxButtons.OKCancel) = Windows.Forms.DialogResult.OK Then
-                'DS.Tables(0).Rows.Remove(CType(bs.Current, DataRowView).Row)
-                For Each dsrow In DataGridView1.SelectedRows
-                    myController.BS.RemoveAt(CType(dsrow, DataGridViewRow).Index)
-                Next
-            End If
-        Else
-            MessageBox.Show("No record to delete.")
-        End If
-    End Sub
+    'Private Sub ToolStripButton3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton3.Click
+    '    If Not IsNothing(myController.BS.Current) Then
+    '        If MessageBox.Show("Delete selected Record(s)?", "Question", System.Windows.Forms.MessageBoxButtons.OKCancel) = Windows.Forms.DialogResult.OK Then
+    '            'DS.Tables(0).Rows.Remove(CType(bs.Current, DataRowView).Row)
+    '            For Each dsrow In DataGridView1.SelectedRows
+    '                myController.BS.RemoveAt(CType(dsrow, DataGridViewRow).Index)
+    '            Next
+    '        End If
+    '    Else
+    '        MessageBox.Show("No record to delete.")
+    '    End If
+    'End Sub
 
-    Private Sub ToolStripButton6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim myform As New FormCategoryIssue
-        myform.Show()
-    End Sub
+    'Private Sub ToolStripButton6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Dim myform As New FormCategoryIssue
+    '    myform.Show()
+    'End Sub
 
-    Private Sub ToolStripButton7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim myform As New FormManagementMessage
-        myform.Show()
-    End Sub
+    'Private Sub ToolStripButton7_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '    Dim myform As New FormManagementMessage
+    '    myform.Show()
+    'End Sub
 
     Private Sub ToolStripTextBox1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripTextBox1.TextChanged
         myController.ApplyFilter = ToolStripTextBox1.Text
@@ -155,9 +155,20 @@ Public Class FormCMMFSPSPM
     End Sub
 
     Private Sub DoImport()
-
+        Dim blankSPPM As Boolean = False
         If myController.ImportData() Then
+            blankSPPM = myController.BlankSPSPM
             DoWork()
+        End If
+        If blankSPPM Then
+            MessageBox.Show("Found blank SP or SPM. Please check your data source.")
+        End If
+    End Sub
+
+    Private Sub ToolStripButton8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ToolStripButton8.Click
+        Dim mydialog As New DialogDateRange
+        If mydialog.ShowDialog = Windows.Forms.DialogResult.OK Then
+            myController.Model.MissingCMMFSPSPM(mydialog.DateTimePickerStartDate.Value, mydialog.DateTimePickerEndDate.Value)
         End If
 
     End Sub

@@ -533,7 +533,7 @@ Partial Class FormLogBook2
         Me.TabPage2.Location = New System.Drawing.Point(4, 22)
         Me.TabPage2.Name = "TabPage2"
         Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(1217, 534)
+        Me.TabPage2.Size = New System.Drawing.Size(1217, 532)
         Me.TabPage2.TabIndex = 1
         Me.TabPage2.Text = "Accounting :: Partial Shipment"
         Me.TabPage2.UseVisualStyleBackColor = True
@@ -565,7 +565,7 @@ Partial Class FormLogBook2
         DataGridViewCellStyle10.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DataGridView2.RowsDefaultCellStyle = DataGridViewCellStyle10
         Me.DataGridView2.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView2.Size = New System.Drawing.Size(1208, 493)
+        Me.DataGridView2.Size = New System.Drawing.Size(1208, 497)
         Me.DataGridView2.TabIndex = 14
         '
         'DataGridViewTextBoxColumn61
@@ -803,7 +803,7 @@ Partial Class FormLogBook2
         Me.TabPage3.Location = New System.Drawing.Point(4, 22)
         Me.TabPage3.Name = "TabPage3"
         Me.TabPage3.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage3.Size = New System.Drawing.Size(1217, 534)
+        Me.TabPage3.Size = New System.Drawing.Size(1217, 532)
         Me.TabPage3.TabIndex = 2
         Me.TabPage3.Text = "Billing Document :: Non Partial Shipment"
         Me.TabPage3.UseVisualStyleBackColor = True
@@ -878,7 +878,7 @@ Partial Class FormLogBook2
         DataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DataGridView3.RowsDefaultCellStyle = DataGridViewCellStyle16
         Me.DataGridView3.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView3.Size = New System.Drawing.Size(1207, 493)
+        Me.DataGridView3.Size = New System.Drawing.Size(1207, 497)
         Me.DataGridView3.TabIndex = 7
         '
         'Column17
@@ -1021,7 +1021,7 @@ Partial Class FormLogBook2
         Me.TabPage4.Location = New System.Drawing.Point(4, 22)
         Me.TabPage4.Name = "TabPage4"
         Me.TabPage4.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage4.Size = New System.Drawing.Size(1217, 534)
+        Me.TabPage4.Size = New System.Drawing.Size(1217, 532)
         Me.TabPage4.TabIndex = 3
         Me.TabPage4.Text = "Billing Document :: Partial Shipment"
         Me.TabPage4.UseVisualStyleBackColor = True
@@ -1053,7 +1053,7 @@ Partial Class FormLogBook2
         DataGridViewCellStyle30.BackColor = System.Drawing.Color.FromArgb(CType(CType(192, Byte), Integer), CType(CType(255, Byte), Integer), CType(CType(255, Byte), Integer))
         Me.DataGridView4.RowsDefaultCellStyle = DataGridViewCellStyle30
         Me.DataGridView4.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView4.Size = New System.Drawing.Size(1204, 493)
+        Me.DataGridView4.Size = New System.Drawing.Size(1204, 497)
         Me.DataGridView4.TabIndex = 14
         '
         'DataGridViewTextBoxColumn49
@@ -1396,10 +1396,10 @@ Partial Class FormLogBook2
         'ToolStrip1
         '
         Me.ToolStrip1.Dock = System.Windows.Forms.DockStyle.None
-        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripComboBox1, Me.ToolStripLabel2, Me.ToolStripLabel3, Me.ToolStripButton3, Me.ToolStripButton2, Me.ToolStripButton4, Me.ToolStripDropDownButton1, Me.ToolStripButton5, Me.ToolStripButton1, Me.ToolStripButton19})
+        Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripLabel1, Me.ToolStripComboBox1, Me.ToolStripLabel2, Me.ToolStripLabel3, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton2, Me.ToolStripDropDownButton1, Me.ToolStripButton5, Me.ToolStripButton1, Me.ToolStripButton19})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 50)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(908, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(1035, 25)
         Me.ToolStrip1.TabIndex = 0
         Me.ToolStrip1.Text = "ToolStrip1"
         '

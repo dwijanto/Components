@@ -4,7 +4,7 @@ Imports System.Text
 Public Class CMMFSPSPMModel
     Implements IModel
 
-    Dim myadapter As DbAdapter = DbAdapter.getInstance
+    Public myadapter As DbAdapter = DbAdapter.getInstance
 
     Public Property cmmf As String    
     Public Property sp As String
@@ -103,6 +103,11 @@ Public Class CMMFSPSPMModel
     Public Sub ExportToExcel()
         Dim filename As String = "CMMFSPSPM-" & Format(DateTime.Today, "yyyyMMdd") & ".xlsx"
         Dim sqlstr = "select * from cmmfspspm order by cmmf,sp,spm;"
+        ExcelStuff.ExportToExcelAskDirectory(filename, sqlstr, dbtools1)
+    End Sub
+    Public Sub MissingCMMFSPSPM(ByVal startdate As Date, ByVal enddate As Date)
+        Dim filename As String = "MissingCMMFSPSPM-" & Format(DateTime.Today, "yyyyMMdd") & ".xlsx"
+        Dim sqlstr = String.Format("select * from getmissingcmmfspspm('{0:yyyy-MM-dd}'::date,'{1:yyyy-MM-dd}'::date);", startdate, enddate)
         ExcelStuff.ExportToExcelAskDirectory(filename, sqlstr, dbtools1)
     End Sub
 

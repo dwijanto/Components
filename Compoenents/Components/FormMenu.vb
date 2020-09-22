@@ -12,7 +12,10 @@ Public Class FormMenu
         Me.FormMenu_Load(Me, New EventArgs)
 
         AddHandler ChangeUserToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
-        AddHandler ScoreBoardReportToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+
+
+        'AddHandler ScoreboardCPToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
+        AddHandler ScoreboardNewToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler SASLSSLToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler WeeklyFigureToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
         AddHandler CommentConversionToolStripMenuItem.Click, AddressOf ToolStripMenuItem_Click
@@ -313,6 +316,11 @@ Public Class FormMenu
     End Sub
 
     Private Sub MasterGroupSupplierToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MasterGroupSupplierToolStripMenuItem.Click
+
+    End Sub
+
+
+    Private Sub ScoreboardNewToolStripMenuItem_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ScoreboardNewToolStripMenuItem.Click
 
     End Sub
 End Class

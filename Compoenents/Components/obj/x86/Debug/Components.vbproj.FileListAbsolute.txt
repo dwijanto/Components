@@ -488,3 +488,4 @@ C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\C
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.FormMasterGroupSupplier.resources
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.FormScoreboardNet.resources
 C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.DialogDateRange.resources
+C:\Users\dlie\Documents\GitHub\Components\Compoenents\Components\obj\x86\Debug\Components.SplashScreen1.resources

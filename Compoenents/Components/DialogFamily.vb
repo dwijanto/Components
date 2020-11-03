@@ -29,7 +29,8 @@ Public Class DialogFamily
 
     Private Sub initData()
         ComboBox1.DataBindings.Clear()
-       
+        ComboBox2.DataBindings.Clear()
+
         TextBox1.DataBindings.Clear()
         TextBox2.DataBindings.Clear()
 
@@ -37,10 +38,15 @@ Public Class DialogFamily
         ComboBox1.DisplayMember = "sbuname"
         ComboBox1.DataSource = SBUController1.GetSBUBS("where act")
 
+        ComboBox2.ValueMember = "sbuid"
+        ComboBox2.DisplayMember = "sbuname"
+        ComboBox2.DataSource = SBUController1.GetSBUBS("where bu")
+
 
         TextBox1.DataBindings.Add(New Binding("text", DRV, "familyid", True, DataSourceUpdateMode.OnPropertyChanged))
         TextBox2.DataBindings.Add(New Binding("text", DRV, "familyname", True, DataSourceUpdateMode.OnPropertyChanged))
         ComboBox1.DataBindings.Add(New Binding("selectedvalue", DRV, "sbuid", True, DataSourceUpdateMode.OnPropertyChanged))
+        ComboBox2.DataBindings.Add(New Binding("selectedvalue", DRV, "buid", True, DataSourceUpdateMode.OnPropertyChanged))
         
     End Sub
 

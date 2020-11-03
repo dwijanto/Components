@@ -31,6 +31,8 @@ Partial Class DialogFamily
         Me.TextBox2 = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -119,6 +121,25 @@ Partial Class DialogFamily
         Me.TextBox1.Size = New System.Drawing.Size(70, 20)
         Me.TextBox1.TabIndex = 13
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(70, 121)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(53, 13)
+        Me.Label4.TabIndex = 23
+        Me.Label4.Text = "BU Name"
+        '
+        'ComboBox2
+        '
+        Me.ComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.ComboBox2.FlatStyle = System.Windows.Forms.FlatStyle.Flat
+        Me.ComboBox2.FormattingEnabled = True
+        Me.ComboBox2.Location = New System.Drawing.Point(129, 118)
+        Me.ComboBox2.Name = "ComboBox2"
+        Me.ComboBox2.Size = New System.Drawing.Size(264, 21)
+        Me.ComboBox2.TabIndex = 22
+        '
         'DialogFamily
         '
         Me.AcceptButton = Me.OK_Button
@@ -126,6 +147,8 @@ Partial Class DialogFamily
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.CancelButton = Me.Cancel_Button
         Me.ClientSize = New System.Drawing.Size(447, 215)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.ComboBox2)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Label2)
@@ -154,5 +177,7 @@ Partial Class DialogFamily
     Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox2 As System.Windows.Forms.ComboBox
 
 End Class

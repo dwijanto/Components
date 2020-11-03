@@ -36,8 +36,8 @@ Public Class FamilyModel
         Dim myret As Boolean = False
         Using conn As Object = myadapter.getConnection
             conn.Open()
-            Dim sqlstr = String.Format("select f.familyid, f.familyid::Text as familyidtext,f.familyname::text,f.sbuid,s.sbuname::text from {0} f" &
-                                       " left join sbu s on s.sbuid  = f.sbuid order by {1};", TableName, SortField)
+            Dim sqlstr = String.Format("select f.familyid, f.familyid::Text as familyidtext,f.familyname::text,f.sbuid,s.sbuname::text,f.buid,s2.sbuname from {0} f" &
+                                       " left join sbu s on s.sbuid  = f.sbuid left join sbu s2 on s2.sbuid  = f.buid order by {1};", TableName, SortField)
             dataadapter.SelectCommand = myadapter.getCommandObject(sqlstr, conn)
             dataadapter.SelectCommand.CommandType = CommandType.Text
             dataadapter.Fill(DS, TableName)
@@ -61,7 +61,7 @@ Public Class FamilyModel
             dataadapter.UpdateCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Bigint, 0, "familyid").SourceVersion = DataRowVersion.Current
             dataadapter.UpdateCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Varchar, 0, "familyname").SourceVersion = DataRowVersion.Current            
             dataadapter.UpdateCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Integer, 0, "sbuid").SourceVersion = DataRowVersion.Current
-            
+            dataadapter.UpdateCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Integer, 0, "buid").SourceVersion = DataRowVersion.Current
             dataadapter.UpdateCommand.CommandType = CommandType.StoredProcedure
 
             sqlstr = "sp_insertfamily"
@@ -69,6 +69,7 @@ Public Class FamilyModel
             dataadapter.InsertCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Bigint, 0, "familyid").SourceVersion = DataRowVersion.Current
             dataadapter.InsertCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Varchar, 0, "familyname").SourceVersion = DataRowVersion.Current
             dataadapter.InsertCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Integer, 0, "sbuid").SourceVersion = DataRowVersion.Current
+            dataadapter.UpdateCommand.Parameters.Add("", NpgsqlTypes.NpgsqlDbType.Integer, 0, "buid").SourceVersion = DataRowVersion.Current
             dataadapter.InsertCommand.CommandType = CommandType.StoredProcedure
 
             sqlstr = "sp_deleteactivity"

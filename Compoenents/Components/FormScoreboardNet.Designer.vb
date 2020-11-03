@@ -27,6 +27,10 @@ Partial Class FormScoreboardNet
         Me.ToolStripStatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripStatusLabel2 = New System.Windows.Forms.ToolStripStatusLabel()
         Me.ToolStripProgressBar1 = New System.Windows.Forms.ToolStripProgressBar()
+        Me.GroupBox2 = New System.Windows.Forms.GroupBox()
+        Me.RadioButton3 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton2 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Label5 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
@@ -42,7 +46,6 @@ Partial Class FormScoreboardNet
         Me.DateTimePickerStartDate = New System.Windows.Forms.DateTimePicker()
         Me.DateTimePickerEndDate = New System.Windows.Forms.DateTimePicker()
         Me.CheckedListBox1 = New System.Windows.Forms.CheckedListBox()
-        Me.CheckBoxWMF = New System.Windows.Forms.CheckBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.RadioButtonComponents = New System.Windows.Forms.RadioButton()
         Me.RadioButtonFinishedGoods = New System.Windows.Forms.RadioButton()
@@ -50,6 +53,7 @@ Partial Class FormScoreboardNet
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
         Me.ToolStripContainer1.SuspendLayout()
         Me.StatusStrip1.SuspendLayout()
+        Me.GroupBox2.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -62,6 +66,7 @@ Partial Class FormScoreboardNet
         '
         'ToolStripContainer1.ContentPanel
         '
+        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.GroupBox2)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.Label6)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.Label5)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.Button1)
@@ -77,7 +82,6 @@ Partial Class FormScoreboardNet
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DateTimePickerStartDate)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.DateTimePickerEndDate)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.CheckedListBox1)
-        Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.CheckBoxWMF)
         Me.ToolStripContainer1.ContentPanel.Controls.Add(Me.GroupBox1)
         Me.ToolStripContainer1.ContentPanel.Size = New System.Drawing.Size(785, 428)
         Me.ToolStripContainer1.Dock = System.Windows.Forms.DockStyle.Fill
@@ -112,6 +116,49 @@ Partial Class FormScoreboardNet
         '
         Me.ToolStripProgressBar1.Name = "ToolStripProgressBar1"
         Me.ToolStripProgressBar1.Size = New System.Drawing.Size(100, 16)
+        '
+        'GroupBox2
+        '
+        Me.GroupBox2.Controls.Add(Me.RadioButton3)
+        Me.GroupBox2.Controls.Add(Me.RadioButton2)
+        Me.GroupBox2.Controls.Add(Me.RadioButton1)
+        Me.GroupBox2.Location = New System.Drawing.Point(184, 72)
+        Me.GroupBox2.Name = "GroupBox2"
+        Me.GroupBox2.Size = New System.Drawing.Size(449, 31)
+        Me.GroupBox2.TabIndex = 42
+        Me.GroupBox2.TabStop = False
+        '
+        'RadioButton3
+        '
+        Me.RadioButton3.AutoSize = True
+        Me.RadioButton3.Location = New System.Drawing.Point(175, 8)
+        Me.RadioButton3.Name = "RadioButton3"
+        Me.RadioButton3.Size = New System.Drawing.Size(100, 17)
+        Me.RadioButton3.TabIndex = 2
+        Me.RadioButton3.Text = "Group Suppliers"
+        Me.RadioButton3.UseVisualStyleBackColor = True
+        '
+        'RadioButton2
+        '
+        Me.RadioButton2.AutoSize = True
+        Me.RadioButton2.Location = New System.Drawing.Point(105, 8)
+        Me.RadioButton2.Name = "RadioButton2"
+        Me.RadioButton2.Size = New System.Drawing.Size(51, 17)
+        Me.RadioButton2.TabIndex = 1
+        Me.RadioButton2.Text = "WMF"
+        Me.RadioButton2.UseVisualStyleBackColor = True
+        '
+        'RadioButton1
+        '
+        Me.RadioButton1.AutoSize = True
+        Me.RadioButton1.Checked = True
+        Me.RadioButton1.Location = New System.Drawing.Point(8, 8)
+        Me.RadioButton1.Name = "RadioButton1"
+        Me.RadioButton1.Size = New System.Drawing.Size(78, 17)
+        Me.RadioButton1.TabIndex = 0
+        Me.RadioButton1.TabStop = True
+        Me.RadioButton1.Text = "All Vendors"
+        Me.RadioButton1.UseVisualStyleBackColor = True
         '
         'Label6
         '
@@ -249,20 +296,10 @@ Partial Class FormScoreboardNet
         '
         Me.CheckedListBox1.CheckOnClick = True
         Me.CheckedListBox1.FormattingEnabled = True
-        Me.CheckedListBox1.Location = New System.Drawing.Point(184, 95)
+        Me.CheckedListBox1.Location = New System.Drawing.Point(184, 109)
         Me.CheckedListBox1.Name = "CheckedListBox1"
         Me.CheckedListBox1.Size = New System.Drawing.Size(449, 124)
         Me.CheckedListBox1.TabIndex = 4
-        '
-        'CheckBoxWMF
-        '
-        Me.CheckBoxWMF.AutoSize = True
-        Me.CheckBoxWMF.Location = New System.Drawing.Point(185, 71)
-        Me.CheckBoxWMF.Name = "CheckBoxWMF"
-        Me.CheckBoxWMF.Size = New System.Drawing.Size(52, 17)
-        Me.CheckBoxWMF.TabIndex = 2
-        Me.CheckBoxWMF.Text = "WMF"
-        Me.CheckBoxWMF.UseVisualStyleBackColor = True
         '
         'GroupBox1
         '
@@ -312,6 +349,8 @@ Partial Class FormScoreboardNet
         Me.ToolStripContainer1.PerformLayout()
         Me.StatusStrip1.ResumeLayout(False)
         Me.StatusStrip1.PerformLayout()
+        Me.GroupBox2.ResumeLayout(False)
+        Me.GroupBox2.PerformLayout()
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
         Me.ResumeLayout(False)
@@ -319,7 +358,6 @@ Partial Class FormScoreboardNet
     End Sub
     Friend WithEvents ToolStripContainer1 As System.Windows.Forms.ToolStripContainer
     Friend WithEvents StatusStrip1 As System.Windows.Forms.StatusStrip
-    Friend WithEvents CheckBoxWMF As System.Windows.Forms.CheckBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents RadioButtonComponents As System.Windows.Forms.RadioButton
     Friend WithEvents Button1 As System.Windows.Forms.Button
@@ -341,4 +379,8 @@ Partial Class FormScoreboardNet
     Public WithEvents ToolStripStatusLabel2 As System.Windows.Forms.ToolStripStatusLabel
     Public WithEvents ToolStripProgressBar1 As System.Windows.Forms.ToolStripProgressBar
     Public WithEvents RadioButtonFinishedGoods As System.Windows.Forms.RadioButton
+    Friend WithEvents GroupBox2 As System.Windows.Forms.GroupBox
+    Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
+    Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
 End Class

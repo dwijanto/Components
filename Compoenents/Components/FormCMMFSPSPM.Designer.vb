@@ -57,7 +57,7 @@ Partial Class FormCMMFSPSPM
         Me.ToolStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripButton1, Me.ToolStripButton2, Me.ToolStripButton3, Me.ToolStripButton4, Me.ToolStripButton5, Me.ToolStripSeparator1, Me.ToolStripLabel1, Me.ToolStripTextBox1, Me.ToolStripButton7, Me.ToolStripButton6, Me.ToolStripButton8})
         Me.ToolStrip1.Location = New System.Drawing.Point(3, 0)
         Me.ToolStrip1.Name = "ToolStrip1"
-        Me.ToolStrip1.Size = New System.Drawing.Size(521, 25)
+        Me.ToolStrip1.Size = New System.Drawing.Size(522, 25)
         Me.ToolStrip1.TabIndex = 16
         Me.ToolStrip1.Text = "ToolStrip1"
         '
@@ -141,7 +141,7 @@ Partial Class FormCMMFSPSPM
         Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(89, 22)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(90, 22)
         Me.ToolStripButton6.Text = "Export To Excel"
         '
         'ToolStripButton8

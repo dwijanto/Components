@@ -17,6 +17,8 @@ Public Class ScoreboardController
 
     Public Department As DepartmentEnum = DepartmentEnum.FinishedGoods
     Public WMF As Boolean = False
+    Public GROUPSUPPLIER As Boolean = False
+
     Public ExcludeSiS As Boolean = True
     Public OnlySIS As Boolean = False
     Public OnlyWMF As Boolean = False
@@ -61,13 +63,28 @@ Public Class ScoreboardController
         If WMF Then
             WMFCriteria = String.Format(" left join ekko e on e.vendorcode = vp.vendorcode" &
                           " where e.purchasinggroup in ({0})", WMFList)
+        ElseIf GROUPSUPPLIER Then
+            WMFCriteria = String.Format(" where v.vendorcode in (select supplierid from groupsupplier)")
         End If
-        Select Case Department
-            Case DepartmentEnum.FinishedGoods
-                doBackground1.doThread(AddressOf doQueryFG)
-            Case DepartmentEnum.Components
-                doBackground1.doThread(AddressOf doQueryCP)
-        End Select
+        If IsNothing(doBackground1.myThread) Then
+            Select Case Department
+                Case DepartmentEnum.FinishedGoods
+                    doBackground1.doThread(AddressOf doQueryFG)
+                Case DepartmentEnum.Components
+                    doBackground1.doThread(AddressOf doQueryCP)
+            End Select
+        Else
+            If Not doBackground1.myThread.IsAlive Then
+                Select Case Department
+                    Case DepartmentEnum.FinishedGoods
+                        doBackground1.doThread(AddressOf doQueryFG)
+                    Case DepartmentEnum.Components
+                        doBackground1.doThread(AddressOf doQueryCP)
+                End Select
+            End If
+        End If
+        
+
     End Sub
 
     Public Sub LoadData()

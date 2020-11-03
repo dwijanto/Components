@@ -164,7 +164,7 @@ Partial Class FormMasterGroupSupplier
         Me.ToolStripButton6.Image = CType(resources.GetObject("ToolStripButton6.Image"), System.Drawing.Image)
         Me.ToolStripButton6.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ToolStripButton6.Name = "ToolStripButton6"
-        Me.ToolStripButton6.Size = New System.Drawing.Size(89, 22)
+        Me.ToolStripButton6.Size = New System.Drawing.Size(90, 22)
         Me.ToolStripButton6.Text = "Export To Excel"
         Me.ToolStripButton6.Visible = False
         '

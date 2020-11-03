@@ -188,26 +188,50 @@ Public Class FormLogBook2
         If myuser2 <> "" Then            
             sqlstrAccountingNonPartial = String.Format("select sp.*,c.customername::text as soldtopartyname,c1.customername::text as shiptopartyname from sp_getaccountingdatanonpartial('{0}',{1},{2}) sp left join customer c on c.customercode = sp.soldtoparty::bigint left join customer c1 on c1.customercode = sp.shiptoparty::bigint;", validstr(myuser2), DateFormatyyyyMMdd(startdate), DateFormatyyyyMMdd(enddate))            
             sqlstrAccountingPartial = String.Format("select sp.*,c.customername::text as soldtopartyname,c1.customername::text as shiptopartyname from sp_getaccountingdatapartial('{0}',{1},{2}) sp left join customer c on c.customercode = sp.soldtoparty::bigint left join customer c1 on c1.customercode = sp.shiptoparty::bigint;", validstr(myuser2), DateFormatyyyyMMdd(startdate), DateFormatyyyyMMdd(enddate))
+            'sqlstrBillingNonPartial = String.Format("with gbh as(select * from getbillingdocument('{0}',{1},{2}))," &
+            '                          " foo2 as (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty " &
+            '                          " from gbh left join billingdtl bt on bt.billingdocument = gbh.billingdocument and bt.item = gbh.billingitem" &
+            '                          " left join billinghd bh on bh.billingdocument = gbh.billingdocument  left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem " &
+            '                          " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid  left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid " &
+            '                          " where not sebasiapono isnull and bt.requiredqty - bt.billedqty = 0 ) " &
+            '                          " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill " &
+            '                          " from  foo2  " &
+            '                          " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby from packinglistdt pld " &
+            '                          " left join packinglisthd plh on plh.delivery = pld.delivery)foo3 on foo3.pohd = foo2.sebasiapono and foo3.poitem = foo2.polineno " &
+            '                          " left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem " &
+            '                          " order by billingdocument;", validstr(myuser2), DateFormatyyyyMMdd(startdate), DateFormatyyyyMMdd(enddate))
             sqlstrBillingNonPartial = String.Format("with gbh as(select * from getbillingdocument('{0}',{1},{2}))," &
-                                      " foo2 as (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty " &
+                                      " foo2 as (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bh.reversedoc " &
                                       " from gbh left join billingdtl bt on bt.billingdocument = gbh.billingdocument and bt.item = gbh.billingitem" &
                                       " left join billinghd bh on bh.billingdocument = gbh.billingdocument  left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem " &
                                       " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid  left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid " &
                                       " where not sebasiapono isnull and bt.requiredqty - bt.billedqty = 0 ) " &
-                                      " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill " &
+                                      " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill,foo2.reversedoc " &
                                       " from  foo2  " &
                                       " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby from packinglistdt pld " &
                                       " left join packinglisthd plh on plh.delivery = pld.delivery)foo3 on foo3.pohd = foo2.sebasiapono and foo3.poitem = foo2.polineno " &
                                       " left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem " &
                                       " order by billingdocument;", validstr(myuser2), DateFormatyyyyMMdd(startdate), DateFormatyyyyMMdd(enddate))
 
+            'sqlstrBillingPartial = String.Format("with gbh as(select * from getbillingdocument('{0}'::character varying,{1},{2}))," &
+            '                       " foo2 as(select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty " &
+            '                       " from gbh	left join billingdtl bt on bt.billingdocument = gbh.billingdocument and bt.item = gbh.billingitem" &
+            '                       " left join billinghd bh on bh.billingdocument = gbh.billingdocument left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem " &
+            '                       " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid 	left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid " &
+            '                       " where not sebasiapono isnull and bt.requiredqty - bt.billedqty <> 0 ) " &
+            '                       " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,foo3.delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill " &
+            '                       " from foo2 left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem " &
+            '                       " left join packinglistdocument plc on plc.docno = foo2.billingdocument and plc.pohd = foo2.sebasiapono and plc.poitem = foo2.polineno " &
+            '                       " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby " &
+            '                       " from packinglistdt pld left join packinglisthd plh on plh.delivery = pld.delivery ) foo3 on foo3.delivery = plc.delivery and foo3.deliveryitem = plc.item 	" &
+            '                       "order by billingdocument;", validstr(myuser2), DateFormatyyyyMMdd(startdate), DateFormatyyyyMMdd(enddate))
             sqlstrBillingPartial = String.Format("with gbh as(select * from getbillingdocument('{0}'::character varying,{1},{2}))," &
-                                   " foo2 as(select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty " &
+                                   " foo2 as(select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bh.reversedoc " &
                                    " from gbh	left join billingdtl bt on bt.billingdocument = gbh.billingdocument and bt.item = gbh.billingitem" &
                                    " left join billinghd bh on bh.billingdocument = gbh.billingdocument left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem " &
                                    " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid 	left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid " &
                                    " where not sebasiapono isnull and bt.requiredqty - bt.billedqty <> 0 ) " &
-                                   " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,foo3.delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill " &
+                                   " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,foo3.delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill,foo2.reversedoc " &
                                    " from foo2 left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem " &
                                    " left join packinglistdocument plc on plc.docno = foo2.billingdocument and plc.pohd = foo2.sebasiapono and plc.poitem = foo2.polineno " &
                                    " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby " &
@@ -232,15 +256,31 @@ Public Class FormLogBook2
             '                            " ) foo3 on foo3.pohd = foo2.sebasiapono and foo3.poitem = foo2.polineno" &
             '                            " left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem" &
             '                            " order by billingdocument;"
+            'sqlstrBillingNonPartial = "with foo2 as " &
+            '                            " (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bt.requiredqty - bt.billedqty as flag" &
+            '                            " from billinghd bh" &
+            '                            " left join billingdtl bt on bt.billingdocument = bh.billingdocument" &
+            '                            " left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem" &
+            '                            " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid" &
+            '                            " left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid" &
+            '                            " where not sebasiapono isnull and createdon >= " & DateFormatyyyyMMdd(startdate) & " and createdon <=  " & DateFormatyyyyMMdd(enddate) & myOfficer & ")" &
+            '                            " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill" &
+            '                            " from " &
+            '                            "foo2 " &
+            '                            " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby from packinglistdt pld" &
+            '                            " left join packinglisthd plh on plh.delivery = pld.delivery" &
+            '                            " ) foo3 on foo3.pohd = foo2.sebasiapono and foo3.poitem = foo2.polineno" &
+            '                            " left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem" &
+            '                            " where foo2.flag = 0 order by billingdocument;"
             sqlstrBillingNonPartial = "with foo2 as " &
-                                        " (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bt.requiredqty - bt.billedqty as flag" &
+                                        " (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bt.requiredqty - bt.billedqty as flag,bh.reversedoc" &
                                         " from billinghd bh" &
                                         " left join billingdtl bt on bt.billingdocument = bh.billingdocument" &
                                         " left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem" &
                                         " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid" &
                                         " left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid" &
                                         " where not sebasiapono isnull and createdon >= " & DateFormatyyyyMMdd(startdate) & " and createdon <=  " & DateFormatyyyyMMdd(enddate) & myOfficer & ")" &
-                                        " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill" &
+                                        " select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill,foo2.reversedoc" &
                                         " from " &
                                         "foo2 " &
                                         " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby from packinglistdt pld" &
@@ -264,14 +304,30 @@ Public Class FormLogBook2
             '                                " left join packinglisthd plh on plh.delivery = pld.delivery" &
             '                                " ) foo3 on foo3.delivery = plc.delivery and foo3.deliveryitem = plc.item" &
             '                                " order by billingdocument;"
-            sqlstrBillingPartial = " with foo2 as (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bt.requiredqty - bt.billedqty as flag" &
+            'sqlstrBillingPartial = " with foo2 as (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bt.requiredqty - bt.billedqty as flag" &
+            '                               " from billinghd bh" &
+            '                               " left join billingdtl bt on bt.billingdocument = bh.billingdocument" &
+            '                               " left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem" &
+            '                               " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid" &
+            '                               " left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid" &
+            '                               " where not sebasiapono isnull  and createdon >= " & DateFormatyyyyMMdd(startdate) & " and createdon <=  " & DateFormatyyyyMMdd(enddate) & myOfficer & ") " &
+            '                    "select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,foo3.delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill" &
+            '                               " from " &
+            '                               "  foo2 " &
+            '                               " left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem" &
+            '                               " left join packinglistdocument plc on plc.docno = foo2.billingdocument and plc.pohd = foo2.sebasiapono and plc.poitem = foo2.polineno" &
+            '                               " left join (select plh.delivery,pld.deliveryitem,pohd,poitem,deliveredqty,housebill,createdby from packinglistdt pld" &
+            '                               " left join packinglisthd plh on plh.delivery = pld.delivery" &
+            '                               " ) foo3 on foo3.delivery = plc.delivery and foo3.deliveryitem = plc.item" &
+            '                               " where foo2.flag <> 0 order by billingdocument;"
+            sqlstrBillingPartial = " with foo2 as (select bh.billingdocument,billingtype,salesdoc,salesdocitem,sebasiapono,polineno,createdon,officer,billedqty,requiredqty,bt.requiredqty - bt.billedqty as flag,bh.reversedoc" &
                                            " from billinghd bh" &
                                            " left join billingdtl bt on bt.billingdocument = bh.billingdocument" &
                                            " left join cxsalesorderdtl sd on sd.sebasiasalesorder = bt.salesdoc and sd.solineno = bt.salesdocitem" &
                                            " left join cxrelsalesdocpo cr on cr.cxsalesorderdtlid = sd.cxsalesorderdtlid" &
                                            " left join cxsebpodtl cpd on cpd.cxsebpodtlid = cr.cxsebpodtlid" &
                                            " where not sebasiapono isnull  and createdon >= " & DateFormatyyyyMMdd(startdate) & " and createdon <=  " & DateFormatyyyyMMdd(enddate) & myOfficer & ") " &
-                                "select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,foo3.delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill" &
+                                "select foo2.billingdocument::character varying,foo2.billingtype,foo2.createdon,br.status, foo2.salesdoc::character varying,foo2.salesdocitem,foo2.sebasiapono::character varying,foo2.polineno,foo3.delivery::character varying,deliveryitem,deliveredqty,billedqty,requiredqty,officer,housebill,foo2.reversedoc" &
                                            " from " &
                                            "  foo2 " &
                                            " left join billingdocreversal br on br.billingdoc = foo2.billingdocument and br.salesdoc = foo2.salesdoc and br.item = foo2.salesdocitem" &
@@ -315,7 +371,17 @@ Public Class FormLogBook2
                     If IsDBNull(dr.Item("status")) Then
                         dr.Item("status") = True
                     End If
+                    'Find ReverseTX
+                    If Not IsDBNull(dr.Item("reversedoc")) Then
+                        bs3.Filter = String.Format("billingdocument = {0}", dr.Item("reversedoc"))
+                        For Each drv In bs3.List
+                            If IsDBNull(drv.row.item("status")) Then
+                                drv.row.Item("status") = True
+                            End If
 
+                        Next
+                        bs3.RemoveFilter()
+                    End If
 
                 End If
 
@@ -328,7 +394,16 @@ Public Class FormLogBook2
                     If IsDBNull(dr.Item("status")) Then
                         dr.Item("status") = True
                     End If
-
+                    'Find ReverseTX
+                    If Not IsDBNull(dr.Item("reversedoc")) Then
+                        bs4.Filter = String.Format("billingdocument = {0}", dr.Item("reversedoc"))
+                        For Each drv In bs4.List
+                            If IsDBNull(drv.row.item("status")) Then
+                                drv.row.Item("status") = True
+                            End If
+                        Next
+                        bs4.RemoveFilter()
+                    End If
 
                 End If
             Next
@@ -575,10 +650,7 @@ Public Class FormLogBook2
                     If IsDBNull(dr.Item("status")) Then
                         dr.Item("status") = True
                     End If
-
-
                 End If
-
             Next
 
             For i = 0 To bs4.Count - 1

@@ -55,7 +55,6 @@ Public Class FormScoreboardNet
             myController.GenerateReport()
         End If
 
-
     End Sub
 
     Private Sub RadioButton1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButtonFinishedGoods.CheckedChanged
@@ -68,10 +67,10 @@ Public Class FormScoreboardNet
         myController.GetInitialData()
     End Sub
 
-    Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles CheckBoxWMF.CheckedChanged
-        myController.WMF = CheckBoxWMF.Checked
-        myController.GetInitialData()
-    End Sub
+    'Private Sub CheckBox1_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) 'Handles CheckBoxWMF.CheckedChanged
+    '    myController.WMF = CheckBoxWMF.Checked
+    '    myController.GetInitialData()
+    'End Sub
 
     Private Function ValidateFSLDate() As Boolean
         ValidateFSLDate = True
@@ -80,4 +79,21 @@ Public Class FormScoreboardNet
             MsgBox("Please select date on Monday for FSL / FSSL Start Date!")
         End If
     End Function
+
+    Private Sub RadioButton2_CheckedChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RadioButton1.CheckedChanged, RadioButton2.CheckedChanged, RadioButton3.CheckedChanged
+        Dim obj As RadioButton = DirectCast(sender, RadioButton)
+        myController.WMF = False
+        myController.GROUPSUPPLIER = False
+        If obj.Checked Then
+            Select Case DirectCast(sender, RadioButton).Text
+                Case "WMF"
+                    myController.WMF = obj.Checked
+                Case "Group Suppliers"
+                    myController.GROUPSUPPLIER = obj.Checked                
+            End Select
+
+            myController.GetInitialData()
+        End If
+
+    End Sub
 End Class

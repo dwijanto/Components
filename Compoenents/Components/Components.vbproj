@@ -920,6 +920,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="SharedClass.vb" />
+    <Compile Include="SplashScreen1.Designer.vb">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="SplashScreen1.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="TestEnum.Designer.vb">
       <DependentUpon>TestEnum.vb</DependentUpon>
     </Compile>
@@ -1311,6 +1317,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Scoreboard.resx">
       <DependentUpon>Scoreboard.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SplashScreen1.resx">
+      <DependentUpon>SplashScreen1.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="TestEnum.resx">
       <DependentUpon>TestEnum.vb</DependentUpon>

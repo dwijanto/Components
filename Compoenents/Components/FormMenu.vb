@@ -93,7 +93,6 @@ Public Class FormMenu
             MessageBox.Show(ex.Message)
             Me.Close()
         End Try
-
     End Sub
     Private Sub loglogin(ByVal userid As String)
         Dim applicationname As String = "Lg Quick Upload"

@@ -38,16 +38,23 @@ Public Class FormImportZZ0035
             End If
 
 
-            If DbAdapter1.getproglock("FormImportZZ0035", HelperClass1.UserInfo.DisplayName, 1) Then
-                ProgressReport(2, "This Program is being used by other person")
-            Else
-                If OpenFileDialog1.ShowDialog = DialogResult.OK Then
-                    myThread = New Thread(AddressOf DoWork)
-                    myThread.Start()
-                End If
-            End If
+            '    If DbAdapter1.getproglock("FormImportZZ0035", HelperClass1.UserInfo.DisplayName, 1) Then
+            '        ProgressReport(2, "This Program is being used by other person")
+            '    Else
+            '        If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+            '            myThread = New Thread(AddressOf DoWork)
+            '            myThread.Start()
+            '        End If
+            '    End If
 
-           
+            If OpenFileDialog1.ShowDialog = DialogResult.OK Then
+                If DbAdapter1.getproglock("FormImportZZ0035", HelperClass1.UserInfo.DisplayName, 1) Then
+                    ProgressReport(2, "This Program is being used by other person")
+                    Exit Sub
+                End If
+                myThread = New Thread(AddressOf DoWork)
+                myThread.Start()
+            End If
         Else
             MessageBox.Show("Process still running. Please Wait!")
         End If
@@ -55,14 +62,19 @@ Public Class FormImportZZ0035
 
     Sub DoQuery()
         'Get last MiroPostingDate
-        Dim sqlstr = "select miropostingdate from miro m order by miropostingdate desc limit 1;" 
+        Dim sqlstr = "select miropostingdate from miro m order by miropostingdate desc limit 1;select userid from programlocking where progname = 'FormImportZZ0035' and status = 1;"
+        'Dim sqlstr = "select miropostingdate from miro m order by miropostingdate desc limit 1;select userid from programlocking where progname = 'FormImportZZ0035';"
         Dim DS As New DataSet
         Dim mymessage As String = String.Empty
         If Not DbAdapter1.TbgetDataSet(sqlstr, DS, mymessage) Then
             ProgressReport(2, mymessage)
         Else
             If DS.Tables(0).Rows.Count > 0 Then
-                ProgressReport(4, String.Format("{0:dd-MMM-yyyy}", DS.Tables(0).Rows(0).Item(0)))
+                Dim byUser As String = String.Empty
+                If DS.Tables(1).Rows.Count > 0 Then
+                    byUser = String.Format("by {0}", DS.Tables(1).Rows(0).Item(0))
+                End If
+                ProgressReport(4, String.Format("{0:dd-MMM-yyyy} {1}", DS.Tables(0).Rows(0).Item(0), byUser))
             End If
 
         End If

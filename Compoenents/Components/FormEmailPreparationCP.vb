@@ -442,7 +442,7 @@ Public Class FormEmailPreparationCP
                 '    msg.CcRecipients.Add(New EmailAddress(mycc))
                 'End If
 
-                msg.Subject = String.Format("{0}/{1}/{2}/{3}/{4:ddMMMyyyy} ", mydr.Row.Item("shiptoparty"), mydr.Row.Item("containerno"), mydr.Row.Item("vendorname"), mydr.Row.Item("billoflading"), mydr.Row.Item("deliverydate")).ToUpper
+                msg.Subject = String.Format("{0}/SHIP DOC/{1}/{2}/{4:ddMMMyyyy}/{3}", mydr.Row.Item("shiptoparty"), mydr.Row.Item("containerno"), mydr.Row.Item("vendorname"), mydr.Row.Item("billoflading"), mydr.Row.Item("deliverydate")).ToUpper
                 Dim bodymessage As String = "<!DOCTYPE html><html><head><meta charset=utf-8 /><style>p.normal{font-size:11.0pt;font-family:""Calibri"",""sans-serif"";}</style></head><body>" &
                                             "<p class=""normal"">Dear " & mynamelist & ",</p>" &
                                             "<p class=""normal"">Enclose please find the shipping document. <br>Thank you very much.</p>" &

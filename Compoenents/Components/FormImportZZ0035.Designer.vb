@@ -34,6 +34,7 @@ Partial Class FormImportZZ0035
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label4 = New System.Windows.Forms.Label()
         Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.Label5 = New System.Windows.Forms.Label()
         Me.StatusStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -90,7 +91,7 @@ Partial Class FormImportZZ0035
         'ToolStripStatusLabel1
         '
         Me.ToolStripStatusLabel1.Name = "ToolStripStatusLabel1"
-        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(403, 17)
+        Me.ToolStripStatusLabel1.Size = New System.Drawing.Size(434, 17)
         Me.ToolStripStatusLabel1.Spring = True
         Me.ToolStripStatusLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
@@ -131,11 +132,22 @@ Partial Class FormImportZZ0035
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
+        'Label5
+        '
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(300, 33)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(88, 13)
+        Me.Label5.TabIndex = 65
+        Me.Label5.Text = "--NOT Available--"
+        Me.Label5.Visible = False
+        '
         'FormImportZZ0035
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(551, 211)
+        Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
@@ -164,4 +176,5 @@ Partial Class FormImportZZ0035
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
+    Friend WithEvents Label5 As System.Windows.Forms.Label
 End Class

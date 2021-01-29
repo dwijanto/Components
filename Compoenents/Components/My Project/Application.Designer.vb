@@ -32,7 +32,7 @@ Namespace My
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _
         Protected Overrides Sub OnCreateMainForm()
-            Me.MainForm = Global.Components.FormMenu
+            Me.MainForm = Global.Components.FormAutoGetEmail
         End Sub
         
         <Global.System.Diagnostics.DebuggerStepThroughAttribute()>  _

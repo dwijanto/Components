@@ -73,3 +73,5 @@
 2019-01-30 02:31:29.287 PM	Logg	The specified object was not found in the store., The process failed to get the correct properties.  :: 
 2019-01-30 02:39:50.130 PM	Logg	The specified object was not found in the store., The process failed to get the correct properties.  :: 
 2019-01-30 02:39:56.271 PM	FormAutoGetEmail_Load	----Component ---
+2021-01-28 02:24:06.792 PM	FormAutoGetEmail_Load	----Start ---
+2021-01-28 02:24:07.566 PM	FormAutoGetEmail_Load	----FinishedGood ---

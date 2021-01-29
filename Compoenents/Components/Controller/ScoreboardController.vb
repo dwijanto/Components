@@ -1510,16 +1510,20 @@ Public Class ScoreboardController
             oSheet.PivotTables("PivotTable1").CalculatedFields.Add("PCTSSLNET", "=sslnet /weight", True)
             oSheet.PivotTables("PivotTable1").CalculatedFields.Add("TargetSSL", myTarget, True)
             oSheet.PivotTables("PivotTable1").CalculatedFields.Add("TargetSSLNET", myTargetSSL, True)
+            oSheet.PivotTables("PivotTable1").CalculatedFields.Add("PCTSSLNETFW", "=sslnetforwarderissue /weight", True)
 
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("ssl"), " Sum of ssl", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("sslnet"), " Sum of sslnet", Excel.XlConsolidationFunction.xlSum)
+            oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("sslnetforwarderissue"), " Sum of sslnetforwarderissue", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").PivotFields(" Sum of ssl").NumberFormat = "0"
             oSheet.PivotTables("PivotTable1").PivotFields(" Sum of sslnet").NumberFormat = "0"
+            oSheet.PivotTables("PivotTable1").PivotFields(" Sum of sslnetforwarderissue").NumberFormat = "0"
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("deliveredqty"), " Sum of deliveryqty", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("TargetSSL"), " Target SSL", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("TargetSSLNET"), " Target SSL NET", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("PCTSSL"), " %SSL", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("PCTSSLNET"), " %SSLNET", Excel.XlConsolidationFunction.xlSum)
+            oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("PCTSSLNETFW"), " %SSLNETFW", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1").AddDataField(oSheet.PivotTables("PivotTable1").PivotFields("weight"), " W-RT", Excel.XlConsolidationFunction.xlSum)
             With oSheet.PivotTables("PivotTable1").PivotFields(" W-RT")
                 .Calculation = Excel.XlPivotFieldCalculation.xlRunningTotal
@@ -1543,6 +1547,7 @@ Public Class ScoreboardController
             oSheet.PivotTables("PivotTable1").PivotFields(" Target SSL NET").NumberFormat = "0%"
             oSheet.PivotTables("PivotTable1").PivotFields(" %SSL").NumberFormat = "0.0%"
             oSheet.PivotTables("PivotTable1").PivotFields(" %SSLNET").NumberFormat = "0.0%"
+            oSheet.PivotTables("PivotTable1").PivotFields(" %SSLNETFW").NumberFormat = "0.0%"
             oSheet.PivotTables("PivotTable1").PivotFields(" Sum of deliveryqty").NumberFormat = "#,##0"
 
             oSheet.PivotTables("PivotTable1").DataPivotField.Orientation = Excel.XlPivotFieldOrientation.xlColumnField
@@ -1580,12 +1585,14 @@ Public Class ScoreboardController
             'oSheet.PivotTables("PivotTable1c").AddDataField oSheet.PivotTables("PivotTable1c").PivotFields("PCTSASL"), " %SASL", xlSum
             oSheet.PivotTables("PivotTable1c").AddDataField(oSheet.PivotTables("PivotTable1c").PivotFields("PCTSSL"), " %SSL", Excel.XlConsolidationFunction.xlSum)
             oSheet.PivotTables("PivotTable1c").AddDataField(oSheet.PivotTables("PivotTable1c").PivotFields("PCTSSLNET"), " %SSLNET", Excel.XlConsolidationFunction.xlSum)
+            oSheet.PivotTables("PivotTable1c").AddDataField(oSheet.PivotTables("PivotTable1c").PivotFields("PCTSSLNETFW"), " %SSLNETFW", Excel.XlConsolidationFunction.xlSum)
             'oSheet.PivotTables("PivotTable1c").PivotFields(" Target SASL").NumberFormat = "0%"
             oSheet.PivotTables("PivotTable1c").PivotFields(" Target SSL").NumberFormat = "0%"
             oSheet.PivotTables("PivotTable1c").PivotFields(" Target SSL NET").NumberFormat = "0%"
             'oSheet.PivotTables("PivotTable1c").PivotFields(" %SASL").NumberFormat = "0.0%"
             oSheet.PivotTables("PivotTable1c").PivotFields(" %SSL").NumberFormat = "0.0%"
             oSheet.PivotTables("PivotTable1c").PivotFields(" %SSLNET").NumberFormat = "0.0%"
+            oSheet.PivotTables("PivotTable1c").PivotFields(" %SSLNETFW").NumberFormat = "0.0%"
             oSheet.PivotTables("PivotTable1c").PivotFields(" Sum of deliveryqty").NumberFormat = "#,##0"
 
             oSheet.PivotTables("PivotTable1c").DataPivotField.Orientation = Excel.XlPivotFieldOrientation.xlColumnField
@@ -1600,15 +1607,15 @@ Public Class ScoreboardController
             obj.FormulaR1C1 = "=COUNTA(C16:C16)"
             If obj.Value > 4 Then
                 myRow = obj.Value - 4 + 8
-                obj = oSheet.Cells(myRow, 23)
+                obj = oSheet.Cells(myRow, 24)
                 obj.Value = "=GETPIVOTDATA("" %SSLNET"",$P$6)"
-                smileySASL = oSheet.Cells(myRow + 1, 23)
+                smileySASL = oSheet.Cells(myRow + 1, 24)
                 smileySASL.Value = "=IF(GETPIVOTDATA("" %SSLNET"",$P$6) >= 0.95,0,if(GETPIVOTDATA("" %SSLNET"",$P$6) >= 0.79,1,2)) "
 
 
-                obj = oSheet.Cells(myRow, 24)
+                obj = oSheet.Cells(myRow, 25)
                 obj.Value = "=GETPIVOTDATA("" %SSL"",$P$6)"
-                smileySSL = oSheet.Cells(myRow + 1, 24)
+                smileySSL = oSheet.Cells(myRow + 1, 25)
                 smileySSL.Value = "=IF(GETPIVOTDATA("" %SSL"",$P$6) > GETPIVOTDATA("" Target SSL"",$P$6),0,IF(GETPIVOTDATA("" %SSL"",$P$6) >=" & wSLow & ",1,2)) "
                 CreatePivotCurrentYear = True
             End If
@@ -1642,7 +1649,7 @@ Public Class ScoreboardController
             oSheet.PivotTables("PivotTable1b").PivotFields("Years").CurrentPage = startdate.Year - 1
 
             Dim obj As Object
-            obj = oSheet.Cells(1, 23)
+            obj = oSheet.Cells(1, 25)
             obj.FormulaR1C1 = "=COUNTA(C26:C26)"
             If obj.Value > 5 Then
                 myret = True

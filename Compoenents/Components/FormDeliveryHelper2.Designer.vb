@@ -27,6 +27,8 @@ Partial Class FormDeliveryHelper2
         Dim DataGridViewCellStyle2 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Dim DataGridViewCellStyle3 As System.Windows.Forms.DataGridViewCellStyle = New System.Windows.Forms.DataGridViewCellStyle()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column2 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column13 = New System.Windows.Forms.DataGridViewTextBoxColumn()
@@ -38,12 +40,10 @@ Partial Class FormDeliveryHelper2
         Me.Column7 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column8 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column9 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column10 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column11 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column12 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Column15 = New System.Windows.Forms.DataGridViewTextBoxColumn()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button1 = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,7 +59,7 @@ Partial Class FormDeliveryHelper2
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column13, Me.Column3, Me.Column4, Me.Column14, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column10, Me.Column11, Me.Column12, Me.Column15})
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Column2, Me.Column13, Me.Column3, Me.Column4, Me.Column14, Me.Column5, Me.Column6, Me.Column7, Me.Column8, Me.Column9, Me.Column15, Me.Column10, Me.Column11, Me.Column12})
         DataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft
         DataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Info
         DataGridViewCellStyle4.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -74,6 +74,28 @@ Partial Class FormDeliveryHelper2
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
         Me.DataGridView1.Size = New System.Drawing.Size(1223, 350)
         Me.DataGridView1.TabIndex = 1
+        '
+        'Button2
+        '
+        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
+        Me.Button2.Location = New System.Drawing.Point(1150, 378)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(85, 31)
+        Me.Button2.TabIndex = 4
+        Me.Button2.Text = "Cancel"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.OK
+        Me.Button1.Location = New System.Drawing.Point(1059, 378)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(85, 31)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "OK"
+        Me.Button1.UseVisualStyleBackColor = True
         '
         'Column1
         '
@@ -163,6 +185,13 @@ Partial Class FormDeliveryHelper2
         Me.Column9.Name = "Column9"
         Me.Column9.ReadOnly = True
         '
+        'Column15
+        '
+        Me.Column15.DataPropertyName = "housebill"
+        Me.Column15.HeaderText = "Housebill"
+        Me.Column15.Name = "Column15"
+        Me.Column15.ReadOnly = True
+        '
         'Column10
         '
         Me.Column10.DataPropertyName = "meansoftranstype"
@@ -186,35 +215,6 @@ Partial Class FormDeliveryHelper2
         Me.Column12.ReadOnly = True
         Me.Column12.Width = 200
         '
-        'Column15
-        '
-        Me.Column15.DataPropertyName = "housebill"
-        Me.Column15.HeaderText = "Housebill"
-        Me.Column15.Name = "Column15"
-        Me.Column15.ReadOnly = True
-        '
-        'Button2
-        '
-        Me.Button2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button2.DialogResult = System.Windows.Forms.DialogResult.Cancel
-        Me.Button2.Location = New System.Drawing.Point(1150, 378)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(85, 31)
-        Me.Button2.TabIndex = 4
-        Me.Button2.Text = "Cancel"
-        Me.Button2.UseVisualStyleBackColor = True
-        '
-        'Button1
-        '
-        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.DialogResult = System.Windows.Forms.DialogResult.OK
-        Me.Button1.Location = New System.Drawing.Point(1059, 378)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(85, 31)
-        Me.Button1.TabIndex = 3
-        Me.Button1.Text = "OK"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
         'FormDeliveryHelper2
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -230,6 +230,8 @@ Partial Class FormDeliveryHelper2
 
     End Sub
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column13 As System.Windows.Forms.DataGridViewTextBoxColumn
@@ -241,10 +243,8 @@ Partial Class FormDeliveryHelper2
     Friend WithEvents Column7 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column8 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column9 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Column15 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column10 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column11 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column12 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Column15 As System.Windows.Forms.DataGridViewTextBoxColumn
-    Friend WithEvents Button2 As System.Windows.Forms.Button
-    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
